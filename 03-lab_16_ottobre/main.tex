@@ -206,15 +206,17 @@ Inoltre, il fronte d'onda ascendente del segnale in uscita è sincronizzato con 
 	\label{fig:schematico_monostabile}
 \end{figure}
 
-In una configurazione iniziale con diodo collegato in parallelo alla capacità, questo porta l'uscita ad essere costante al valore di accensione del diodo circa 0.7V a causa del fluire della corrente nel percorso a resistenza più bassa e quindi la capacità smette di caricarsi.
+Nella prima configurazione mostrata in (Figura da inserire) con diodo collegato in parallelo alla capacità, il comportamento del circuito si può suddividere in due fasi: nella prima fase, la capacità si carica attraverso la resistenza fino a raggiungere circa \SI{0.7}{\volt}.
+A questo punto il diodo entra in conduzione, offrendo un percorso a bassa resistenza alla corrente.
+Di conseguenza, la carica del condensatore si arresta e l’uscita si stabilizza intorno a \SI{0.7}{\volt}. 
 
-La presenza del derivatore (filtro passa-alto) permette di estrarre gli impulsi a delta di dirac da un segnale in ingresso e questo fa si che la soglia dinamica cambi.
-In aggiunta, collegando un diodo al derivatore fa si che passino solo gli impulsi negativi e quindi che il segnale venga disaccoppiato dal resto del circuito.
+L’aggiunta di un derivatore (filtro passa-alto) (Figura da inserire) consente di ottenere brevi impulsi in corrispondenza dei fronti del segnale di ingresso, modificando così il comportamento della soglia dinamica del circuito.
+Collegando un diodo al derivatore si selezionano soltanto gli impulsi negativi, ottenendo un disaccoppiamento del segnale dal resto del circuito.
 
-La durata dell'impulso è definita dalla costante tau e dalle resistenze R1 e R2:
-formule...
+La durata dell'impulso è definita dalla costante $\tau$ e dalle resistenze $R_{1}$ e $R_{2}$:\\
+$T_{A}=\tau\cdot\ln(1+\dfrac{R_{1}}{R_{2}})$.
 
-Tabella dati
+Nella tabella di seguito sono presenti i valori dei componenti utilizzati nella realizzazione del circuito.
 \begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{20pt}
