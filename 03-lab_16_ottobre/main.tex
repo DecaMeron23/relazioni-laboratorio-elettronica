@@ -137,43 +137,43 @@ L'oscillatore è un circuito elettronico che genera un segnale ad onda quadra, i
 \end{figure}
 Il funzionamento del circuito si può suddividere in due fasi:
 \begin{itemize}
-    \item $V_{out} = V_{DD}$: La corrente fluisce da destra verso sinistra caricando il condensatore con una costante di tempo $\tau = R \cdot C$, inoltre si ottiene un potenziale nel morsetto positivo, dell'amplificatore, pari a:
-    \begin{align*}
-        V^+ = V^+_H \overset{\tiny\mathrm{Hp:}\,R_1 = R_2}{\longrightarrow} = \frac{V_{DD}}{2}
-    \end{align*}
-    Si rimane in questa condizione finché la capacità non si carica fino ad avere una caduta di tensione pari (o maggiore) a $V^+_H$.
-    \item Nel momento in cui $V^-$ supera $V^+$ in uscita si ottiene $V_{SS}$, la quale modifica la $V^+$ portandola a una tensione pari a $V^+_L = \frac{V_{SS}}{2}$. In questa condizione la corrente in $R$ scorre da sinistra verso destra, scaricando il condensatore fino a quando la tensione in $V^-$ diventa inferiore a $V^+_L$ portando di nuovo il circuito nello stato precedente. 
+	\item $V_{out} = V_{DD}$: La corrente fluisce da destra verso sinistra caricando il condensatore con una costante di tempo $\tau = R \cdot C$, inoltre si ottiene un potenziale nel morsetto positivo, dell'amplificatore, pari a:
+	      \begin{align*}
+		      V^+ = V^+_H \xrightarrow{\mathrm{Hp:}\,R_1 = R_2} \frac{V_{DD}}{2}
+	      \end{align*}
+	      Si rimane in questa condizione finché la capacità non si carica fino ad avere una caduta di tensione pari (o maggiore) a $V^+_H$.
+	\item Nel momento in cui $V^-$ supera $V^+$ in uscita si ottiene $V_{SS}$, la quale modifica la $V^+$ portandola a una tensione pari a $V^+_L = \frac{V_{SS}}{2}$. In questa condizione la corrente in $R$ scorre da sinistra verso destra, scaricando il condensatore fino a quando la tensione in $V^-$ diventa inferiore a $V^+_L$ portando di nuovo il circuito nello stato precedente.
 \end{itemize}
 Tramite l'equazioni di carica e scarica:
 \begin{align*}
-    V_c (t) = V^- (t) &= V_{\text{finale}} + (V_{\text{iniziale}} - V_{\text{finale}} ) \cdot e^{-\sfrac{t}{\tau}}
+	V_c (t) = V^- (t) & = V_{\text{finale}} + (V_{\text{iniziale}} - V_{\text{finale}} ) \cdot e^{-\sfrac{t}{\tau}}
 \end{align*}
 Si può determinare i tempi un cui $V_{out}$ è alta e bassa, determinando così il valore della frequenza di oscillazione.
 \begin{align*}
-    \text{Carica}\,\, &\Rightarrow V_{DD} + (V^+_L - V_{DD}) \cdot e^{-\sfrac{T_1}{\tau}} = V^+_H\\
-    \text{Scarica}\,\, &\Rightarrow V_{SS} + (V^+_H - V_{SS}) \cdot e^{-\sfrac{T_2}{\tau}} = V^+_L
+	\text{Carica}\,\,  & \Rightarrow V_{DD} + (V^+_L - V_{DD}) \cdot e^{-\sfrac{T_1}{\tau}} = V^+_H \\
+	\text{Scarica}\,\, & \Rightarrow V_{SS} + (V^+_H - V_{SS}) \cdot e^{-\sfrac{T_2}{\tau}} = V^+_L
 \end{align*}
-    Per le quali utilizzando $\left| V_{DD} \right| = \left| V_{SS} \right|$ si ottiene:
+Per le quali utilizzando $\left| V_{DD} \right| = \left| V_{SS} \right|$ si ottiene:
 \begin{align*}
-        T_1 = T_2 = \tau \ln\left( \frac{R_2 + 2R_1}{R_2} \right) 
+	T_1 = T_2 = \tau \ln\left( \frac{R_2 + 2R_1}{R_2} \right)
 \end{align*}
 Questo risultato ci porta concludere che il duty cylce è pari al $50\%$, e la frequenza di oscillazione è pari a $ f = \frac{1}{T_1 + T_2}$, la quale e inversamente proporzionale alla costante di tempo $\tau$.
 
 \noindent I valori utilizzati questo circuito sono indicati a tabella \ref{tab:oscillatore}, a figura \ref{fig:oscillatore} viene mostrato l'andamento dell'uscita al variare di $V^-$. Infine si sono effettuate diverse prove per confermare la relazione $f \propto \sfrac{1}{\tau}$ modificando la resistenza variabile $R$, figura \ref{fig:ocillatore_freq_tau}.
 
-\noindent In particolare questo circuito, mantenendo sempre $\left| V_{DD} \right| = \left| V_{SS} \right|$, avrà sempre un duty cycle pari al $50\%$, se si volesse modificare si potrebbero utilizzare due resistenze diverse, una per la carica e una per la scarica, utilizzando due diodi per far scorrere la corrente nel modo corretto. 
+\noindent In particolare questo circuito, mantenendo sempre $\left| V_{DD} \right| = \left| V_{SS} \right|$, avrà sempre un duty cycle pari al $50\%$, se si volesse modificare si potrebbero utilizzare due resistenze diverse, una per la carica e una per la scarica, utilizzando due diodi per far scorrere la corrente nel modo corretto.
 \begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{20pt}
 	\begin{tabular}{c c}
 		\toprule
-		Elemento & Valore             \\
+		Elemento & Valore               \\
 		\midrule
-		$V_{DD}$ & $10\,V$            \\
-		$R_1$    & $9.0\,K\Omega$     \\
-		$R_2$    & $9.0\,K\Omega$     \\
-		$R$    & Resistenza variabile    \\
-		$C$      & $70\,\mathrm{nF}$  \\
+		$V_{DD}$ & $10\,V$              \\
+		$R_1$    & $9.0\,K\Omega$       \\
+		$R_2$    & $9.0\,K\Omega$       \\
+		$R$      & Resistenza variabile \\
+		$C$      & $70\,\mathrm{nF}$    \\
 		\bottomrule
 	\end{tabular}
 	\caption{Valori utilizzati nell'oscillatore.}
@@ -181,10 +181,10 @@ Questo risultato ci porta concludere che il duty cylce è pari al $50\%$, e la f
 \end{table}
 
 \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\linewidth]{immagini/ocillatore/oscillatore.PNG}
-    \caption{Schermata dell'oscilloscopio, in giallo $V^-$ mentre in azzurro l'uscita $V_{out}$.}
-    \label{fig:oscillatore}
+	\centering
+	\includegraphics[width=0.7\linewidth]{immagini/ocillatore/oscillatore.PNG}
+	\caption{Schermata dell'oscilloscopio, in giallo $V^-$ mentre in azzurro l'uscita $V_{out}$.}
+	\label{fig:oscillatore}
 \end{figure}
 
 \begin{figure}[h]
@@ -201,22 +201,32 @@ Inoltre, il fronte d'onda ascendente del segnale in uscita è sincronizzato con 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.6\linewidth]{immagini/monostabile/circuito.png}
+	\includegraphics[width=0.4\linewidth]{immagini/monostabile/circuito_1.png}
+	\caption{Schematico del circuito monostabile.}
+	\label{fig:schematico_monostabile_1}
+\end{figure}
+
+Nella prima configurazione mostrata in figura \ref{fig:schematico_monostabile_1} con diodo collegato in parallelo alla capacità, il comportamento del circuito si può suddividere in due fasi: nella prima fase, la capacità si carica attraverso la resistenza fino a raggiungere circa \SI{0.7}{\volt}.
+A questo punto il diodo entra in conduzione, offrendo un percorso a bassa resistenza alla corrente.
+Di conseguenza, la carica del condensatore si arresta e l’uscita si stabilizza intorno a \SI{0.7}{\volt}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{immagini/monostabile/circuito.png}
 	\caption{Schematico del circuito monostabile.}
 	\label{fig:schematico_monostabile}
 \end{figure}
 
-Nella prima configurazione mostrata in (Figura da inserire) con diodo collegato in parallelo alla capacità, il comportamento del circuito si può suddividere in due fasi: nella prima fase, la capacità si carica attraverso la resistenza fino a raggiungere circa \SI{0.7}{\volt}.
-A questo punto il diodo entra in conduzione, offrendo un percorso a bassa resistenza alla corrente.
-Di conseguenza, la carica del condensatore si arresta e l’uscita si stabilizza intorno a \SI{0.7}{\volt}. 
 
-L’aggiunta di un derivatore (filtro passa-alto) (Figura da inserire) consente di ottenere brevi impulsi in corrispondenza dei fronti del segnale di ingresso, modificando così il comportamento della soglia dinamica del circuito.
+L’aggiunta di un derivatore (filtro passa-alto) figura \ref{fig:schematico_monostabile}, consente di ottenere brevi impulsi in corrispondenza dei fronti del segnale di ingresso, modificando così il comportamento della soglia dinamica del circuito.
 Collegando un diodo al derivatore si selezionano soltanto gli impulsi negativi, ottenendo un disaccoppiamento del segnale dal resto del circuito.
 
-La durata dell'impulso è definita dalla costante $\tau$ e dalle resistenze $R_{1}$ e $R_{2}$:\\
-$T_{A}=\tau\cdot\ln(1+\dfrac{R_{1}}{R_{2}})$.
+La durata dell'impulso $V_{out}$ è definita dalla costante $\tau$ e dalle resistenze $R_{1}$ e $R_{2}$:
+\begin{align*}
+	T_{A}=\tau\cdot\ln(1+\dfrac{R_{1}}{R_{2}}) \xrightarrow{R_1 = R_2 \,\text{e}\, \tau = 721\,\mu s } T_A = 499\,\mu s
+\end{align*}
 
-Nella tabella di seguito sono presenti i valori dei componenti utilizzati nella realizzazione del circuito.
+Nella tabella di seguito (tabella \ref{tab:monostabile}) sono presenti i valori dei componenti utilizzati nella realizzazione del circuito.
 \begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{20pt}
@@ -238,6 +248,20 @@ Nella tabella di seguito sono presenti i valori dei componenti utilizzati nella 
 	\label{tab:monostabile}
 \end{table}
 
+\noindent A figura \ref{fig:monostabile_impulso_durata} viene misurata la durata dell'impulso mentre a figura \ref{fig:monostabile_impulsi} viene mostrata una serie d'impulsi.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{immagini/monostabile/monostabile_durata.PNG}
+	\caption{Impulso monostabile di durata $ 553\,\mu s$.}
+	\label{fig:monostabile_impulso_durata}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{immagini/monostabile/monostabile_impulsi.PNG}
+	\caption{Serie d'impulsi del circuito monostabile.}
+	\label{fig:monostabile_impulsi}
+\end{figure}
 
 \end{document}
 
