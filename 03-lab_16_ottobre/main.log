@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.18)  19 OCT 2025 09:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.18)  20 OCT 2025 09:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -788,135 +788,120 @@ Package pdftex.def Info: ./frontespizio/frontespizio.pdf , page1 used on input l
 <./immagini/schmitt/circuito.png, id=46, 337.26pt x 245.91875pt>
 File: ./immagini/schmitt/circuito.png Graphic file (type png)
 <use ./immagini/schmitt/circuito.png>
-Package pdftex.def Info: ./immagini/schmitt/circuito.png  used on input line 53.
+Package pdftex.def Info: ./immagini/schmitt/circuito.png  used on input line 52.
 (pdftex.def)             Requested size: 214.50119pt x 156.40807pt.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 63.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 63.
-
-[2 <./immagini/schmitt/circuito.png>]
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 71.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 71.
-
+ [2 <./immagini/schmitt/circuito.png>]
 <immagini/schmitt/schmitt_vin_vout_xy.png, id=68, 803.0pt x 481.8pt>
 File: immagini/schmitt/schmitt_vin_vout_xy.png Graphic file (type png)
 <use immagini/schmitt/schmitt_vin_vout_xy.png>
-Package pdftex.def Info: immagini/schmitt/schmitt_vin_vout_xy.png  used on input line 76.
-(pdftex.def)             Requested size: 272.99881pt x 163.80247pt.
+Package pdftex.def Info: immagini/schmitt/schmitt_vin_vout_xy.png  used on input line 75.
+(pdftex.def)             Requested size: 312.00119pt x 187.20282pt.
 <immagini/schmitt/schmitt_vin_vout.png, id=71, 803.0pt x 481.8pt>
 File: immagini/schmitt/schmitt_vin_vout.png Graphic file (type png)
 <use immagini/schmitt/schmitt_vin_vout.png>
-Package pdftex.def Info: immagini/schmitt/schmitt_vin_vout.png  used on input line 106.
+Package pdftex.def Info: immagini/schmitt/schmitt_vin_vout.png  used on input line 105.
 (pdftex.def)             Requested size: 191.10214pt x 114.65659pt.
 <immagini/schmitt/schmitt_vin_vout_rumoroso.png, id=72, 803.0pt x 481.8pt>
 File: immagini/schmitt/schmitt_vin_vout_rumoroso.png Graphic file (type png)
 <use immagini/schmitt/schmitt_vin_vout_rumoroso.png>
-Package pdftex.def Info: immagini/schmitt/schmitt_vin_vout_rumoroso.png  used on input line 110.
+Package pdftex.def Info: immagini/schmitt/schmitt_vin_vout_rumoroso.png  used on input line 109.
 (pdftex.def)             Requested size: 191.10214pt x 114.65659pt.
 <immagini/schmitt/schmitt_v+_vout.png, id=73, 803.0pt x 481.8pt>
 File: immagini/schmitt/schmitt_v+_vout.png Graphic file (type png)
 <use immagini/schmitt/schmitt_v+_vout.png>
-Package pdftex.def Info: immagini/schmitt/schmitt_v+_vout.png  used on input line 115.
+Package pdftex.def Info: immagini/schmitt/schmitt_v+_vout.png  used on input line 114.
 (pdftex.def)             Requested size: 191.10214pt x 114.65659pt.
 <immagini/schmitt/schmitt_vin_v+.png, id=74, 803.0pt x 481.8pt>
 File: immagini/schmitt/schmitt_vin_v+.png Graphic file (type png)
 <use immagini/schmitt/schmitt_vin_v+.png>
-Package pdftex.def Info: immagini/schmitt/schmitt_vin_v+.png  used on input line 119.
+Package pdftex.def Info: immagini/schmitt/schmitt_vin_v+.png  used on input line 118.
 (pdftex.def)             Requested size: 191.10214pt x 114.65659pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3 <./immagini/schmitt/schmitt_vin_vout_xy.png (PNG copy)>]
-<immagini/ocillatore/circuito.png, id=84, 315.1775pt x 289.08pt>
-File: immagini/ocillatore/circuito.png Graphic file (type png)
-<use immagini/ocillatore/circuito.png>
-Package pdftex.def Info: immagini/ocillatore/circuito.png  used on input line 134.
-(pdftex.def)             Requested size: 155.99762pt x 143.07959pt.
+<immagini/oscillatore/circuito.png, id=85, 315.1775pt x 289.08pt>
+File: immagini/oscillatore/circuito.png Graphic file (type png)
+<use immagini/oscillatore/circuito.png>
+Package pdftex.def Info: immagini/oscillatore/circuito.png  used on input line 133.
+(pdftex.def)             Requested size: 195.0pt x 178.8528pt.
  [4 <./immagini/schmitt/schmitt_vin_vout.png (PNG copy)> <./immagini/schmitt/schmitt_vin_vout_rumoroso.png (PNG copy)> <./immagini/schmitt/schmitt_v+_vout.png (PNG copy)> <./immagini/schmitt/schmitt_vin_v+.png (PNG copy)>]
-LaTeX Font Info:    Calculating math sizes for size <8.4> on input line 150.
+LaTeX Font Info:    Calculating math sizes for size <8.4> on input line 149.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.2> not available
-(Font)              size <5> substituted on input line 150.
+(Font)              size <5> substituted on input line 149.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.2> not available
-(Font)              size <5> substituted on input line 150.
+(Font)              size <5> substituted on input line 149.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.2> not available
-(Font)              size <5> substituted on input line 150.
+(Font)              size <5> substituted on input line 149.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <4.2> not available
-(Font)              size <5> substituted on input line 150.
+(Font)              size <5> substituted on input line 149.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <4.2> not available
-(Font)              size <5> substituted on input line 150.
+(Font)              size <5> substituted on input line 149.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <4.2> not available
-(Font)              size <5> substituted on input line 150.
+(Font)              size <5> substituted on input line 149.
 
 
 LaTeX Font Warning: Font shape `TS1/cmr/m/n' in size <4.2> not available
-(Font)              size <5> substituted on input line 150.
+(Font)              size <5> substituted on input line 149.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<immagini/ocillatore/oscillatore.PNG, id=97, 803.0pt x 481.8pt>
-File: immagini/ocillatore/oscillatore.PNG Graphic file (type png)
-<use immagini/ocillatore/oscillatore.PNG>
-Package pdftex.def Info: immagini/ocillatore/oscillatore.PNG  used on input line 185.
+[5 <./immagini/oscillatore/circuito.png>]
+<immagini/oscillatore/oscillatore.PNG, id=109, 803.0pt x 481.8pt>
+File: immagini/oscillatore/oscillatore.PNG Graphic file (type png)
+<use immagini/oscillatore/oscillatore.PNG>
+Package pdftex.def Info: immagini/oscillatore/oscillatore.PNG  used on input line 184.
 (pdftex.def)             Requested size: 272.99881pt x 163.80247pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<immagini/ocillatore/freq_tau.png, id=98, 400.52034pt x 314.51904pt>
-File: immagini/ocillatore/freq_tau.png Graphic file (type png)
-<use immagini/ocillatore/freq_tau.png>
-Package pdftex.def Info: immagini/ocillatore/freq_tau.png  used on input line 192.
+<immagini/oscillatore/freq_tau.png, id=110, 400.52034pt x 314.51904pt>
+File: immagini/oscillatore/freq_tau.png Graphic file (type png)
+<use immagini/oscillatore/freq_tau.png>
+Package pdftex.def Info: immagini/oscillatore/freq_tau.png  used on input line 191.
 (pdftex.def)             Requested size: 234.00238pt x 183.75533pt.
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5 <./immagini/ocillatore/circuito.png>] [6 <./immagini/ocillatore/oscillatore.PNG (PNG copy)> <./immagini/ocillatore/freq_tau.png>]
+[6 <./immagini/oscillatore/oscillatore.PNG (PNG copy)>]
 <immagini/monostabile/circuito_1.png, id=115, 321.2pt x 277.035pt>
 File: immagini/monostabile/circuito_1.png Graphic file (type png)
 <use immagini/monostabile/circuito_1.png>
-Package pdftex.def Info: immagini/monostabile/circuito_1.png  used on input line 204.
-(pdftex.def)             Requested size: 155.99762pt x 134.55203pt.
-<immagini/monostabile/circuito.png, id=117, 398.48875pt x 275.0275pt>
+Package pdftex.def Info: immagini/monostabile/circuito_1.png  used on input line 203.
+(pdftex.def)             Requested size: 195.0pt x 168.19215pt.
+ [7 <./immagini/oscillatore/freq_tau.png> <./immagini/monostabile/circuito_1.png>]
+<immagini/monostabile/circuito.png, id=126, 398.48875pt x 275.0275pt>
 File: immagini/monostabile/circuito.png Graphic file (type png)
 <use immagini/monostabile/circuito.png>
-Package pdftex.def Info: immagini/monostabile/circuito.png  used on input line 215.
-(pdftex.def)             Requested size: 195.0pt x 134.5842pt.
- [7
-
- <./immagini/monostabile/circuito_1.png> <./immagini/monostabile/circuito.png>]
-<immagini/monostabile/monostabile_durata.PNG, id=132, 803.0pt x 481.8pt>
+Package pdftex.def Info: immagini/monostabile/circuito.png  used on input line 214.
+(pdftex.def)             Requested size: 234.00238pt x 161.50104pt.
+<immagini/monostabile/monostabile_durata.PNG, id=131, 803.0pt x 481.8pt>
 File: immagini/monostabile/monostabile_durata.PNG Graphic file (type png)
 <use immagini/monostabile/monostabile_durata.PNG>
-Package pdftex.def Info: immagini/monostabile/monostabile_durata.PNG  used on input line 254.
-(pdftex.def)             Requested size: 272.99881pt x 163.80247pt.
-<immagini/monostabile/monostabile_impulsi.PNG, id=133, 803.0pt x 481.8pt>
-File: immagini/monostabile/monostabile_impulsi.PNG Graphic file (type png)
-<use immagini/monostabile/monostabile_impulsi.PNG>
-Package pdftex.def Info: immagini/monostabile/monostabile_impulsi.PNG  used on input line 261.
+Package pdftex.def Info: immagini/monostabile/monostabile_durata.PNG  used on input line 270.
 (pdftex.def)             Requested size: 272.99881pt x 163.80247pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8 <./immagini/monostabile/monostabile_durata.PNG (PNG copy)>] [9 <./immagini/monostabile/monostabile_impulsi.PNG (PNG copy)>] (./main.aux)
+<immagini/monostabile/monostabile_impulsi.PNG, id=132, 803.0pt x 481.8pt>
+File: immagini/monostabile/monostabile_impulsi.PNG Graphic file (type png)
+<use immagini/monostabile/monostabile_impulsi.PNG>
+Package pdftex.def Info: immagini/monostabile/monostabile_impulsi.PNG  used on input line 277.
+(pdftex.def)             Requested size: 272.99881pt x 163.80247pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8 <./immagini/monostabile/circuito.png>] [9 <./immagini/monostabile/monostabile_durata.PNG (PNG copy)> <./immagini/monostabile/monostabile_impulsi.PNG (PNG copy)>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -930,18 +915,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29445 strings out of 476098
- 596224 string characters out of 5793536
- 1937975 words of memory out of 5000000
- 50931 multiletter control sequences out of 15000+600000
- 574391 words of font info for 80 fonts, out of 8000000 for 9000
+ 29447 strings out of 476098
+ 596268 string characters out of 5793536
+ 1936975 words of memory out of 5000000
+ 50932 multiletter control sequences out of 15000+600000
+ 575167 words of font info for 81 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  99i,19n,101p,550b,1073s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb>
-Output written on main.pdf (9 pages, 640522 bytes).
+ </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb>
+Output written on main.pdf (9 pages, 644468 bytes).
 PDF statistics:
- 329 PDF objects out of 1000 (max. 8388607)
- 154 compressed objects within 2 object streams
+ 348 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
  29 named destinations out of 1000 (max. 500000)
  98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

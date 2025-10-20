@@ -44,9 +44,8 @@ L'amplificatore operazionale è un circuito elettronico che permette di confront
 	V_{out} = A \cdot (V^+ - V^-)
 \end{align*}
 Nel caso ideale $ A \rightarrow \infty $, pertanto l'uscita $V_{out}$ saturerà alla tensione di alimentazione positiva $V_{DD}$ solo se la differenza tra le due tensioni è maggiore di zero, altrimenti $V_{out} = -V_{DD}$.
-
-Questo permette di utilizzarlo come comparatore di due tensioni. Tuttavia nella realtà sono presente delle problematiche dovute alla presenza di rumore elettronico che porta il segnale in uscita ad avere degli scatti spuri dovuti al ripetuto passaggio della soglia a causa del rumore stesso.
-Per risolvere questo problema si utilizza il trigger di Schmitt \ref{fig:trigger_schmitt}.
+Questo permette di utilizzarlo come comparatore di due tensioni. Tuttavia nella realtà sono presenti delle problematiche dovute alla presenza di rumore elettronico che porta il segnale in uscita ad avere degli scatti spuri dovuti al ripetuto passaggio della soglia a causa del rumore stesso.
+Per risolvere questo problema si utilizza il trigger di Schmitt, figura \ref{fig:trigger_schmitt}.
 
 \begin{figure}[h]
 	\centering
@@ -59,32 +58,32 @@ Grazie all'utilizzo di una soglia dinamica, dipendente da $V_{out}$, permette di
 \begin{enumerate}
 	\item Ipotizzando uno stato iniziale in cui $V_{in} \ll 0$ allora si ha che $V_{out}$ satura a $V_{DD}$, questo porta ad avere un potenziale in $V^+$ pari a:
 	      \begin{align*}
-		      V^+ = \frac{R_1}{R_2 + R_1} \cdot V_{DD} \overset{\tiny\mathrm{Hp:}\,R_1 = R_2}{\longrightarrow} \frac{V_{DD}}{2} = V^+_H
+		      V^+ = \frac{R_1}{R_2 + R_1} \cdot V_{DD} \xrightarrow{\mathrm{Hp:}\,R_1 = R_2} \frac{V_{DD}}{2} = V^+_H
 	      \end{align*}
 	      determinando la soglia;
 	\item Quando $V_{in} > V^+_H$ allora $V_{out}$ diventa pari a $V_{SS}$, ciò comporta ad avere $V^+ = \frac{V_{SS}}{2} = V^+_L$, ovvero una nuova soglia;
-	\item Si rimane nello stato $2$ fino a quando $V_{in}$ diventa inferiore di $V^+_L$, se si supera la soglia si riparte dal punto $1$.
+	\item Infine, si rimane nello stato $2$ fino a quando $V_{in}$ diventa inferiore di $V^+_L$, se si supera la soglia si riparte dal punto $1$.
 \end{enumerate}
 Questo andamento genera un ciclo di isteresi con ampiezza pari a:
 \begin{align*}
-	\mathrm{Ampiezza}=\frac{2R_1}{R1+R2} \cdot V_{DD} \overset{\tiny\mathrm{Hp:}\,R_1 = R_2}{\longrightarrow} V_{DD}
+	A =\frac{2R_1}{R1+R2} \cdot V_{DD} \xrightarrow{\mathrm{Hp:}\,R_1 = R_2} V_{DD}
 \end{align*}
 La quale si può verificare a figura \ref{fig:schmitt_mod_xy}.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width = 0.7\linewidth]{immagini/schmitt/schmitt_vin_vout_xy.png}
-	\caption{Ciclo di isteresi del Trigger di Schmitt}
+	\includegraphics[width = 0.8\linewidth]{immagini/schmitt/schmitt_vin_vout_xy.png}
+	\caption{Ciclo di isteresi del Trigger di Schmitt, con ampiezza di circa $10\,\mathrm{V}$}
 	\label{fig:schmitt_mod_xy}
 \end{figure}
 
-I valori utilizzati per testarne il funzionamento sono riportati a tabella \ref{tab:valori_trigger_schmitt}:
+\noindent I valori utilizzati per testarne il funzionamento sono riportati a tabella \ref{tab:valori_trigger_schmitt}:
 \begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{20pt}
 	\begin{tabular}{c c}
 		\toprule
-		Elemento     & Valore            \\
+		\textbf{Grandezza}     & \textbf{Valore}            \\
 		\midrule
 		$V_{DD}$     & $10\,\mathrm{V}$  \\
 		$V_{in\,pp}$ & $20\,\mathrm{V}$  \\
@@ -97,7 +96,7 @@ I valori utilizzati per testarne il funzionamento sono riportati a tabella \ref{
 	\label{tab:valori_trigger_schmitt}
 \end{table}
 
-Da cui sono stati ricavati i grafici a figura \ref{fig:schmitt_oscilloscopio}.
+\noindent I grafici ricavati sono riportati a figura \ref{fig:schmitt_oscilloscopio}.
 
 
 \begin{figure}[h]
@@ -131,13 +130,13 @@ Da cui sono stati ricavati i grafici a figura \ref{fig:schmitt_oscilloscopio}.
 L'oscillatore è un circuito elettronico che genera un segnale ad onda quadra, in questa particolare implementazione si sfrutta il \textit{Trigger di Schmitt} e la carica/scarica di un condensatore, figura \ref{fig:schematico_oscillatore}.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.4\linewidth]{immagini/ocillatore/circuito.png}
+	\includegraphics[width=0.5\linewidth]{immagini/oscillatore/circuito.png}
 	\caption{Schematico oscillatore.}
 	\label{fig:schematico_oscillatore}
 \end{figure}
 Il funzionamento del circuito si può suddividere in due fasi:
 \begin{itemize}
-	\item $V_{out} = V_{DD}$: La corrente fluisce da destra verso sinistra caricando il condensatore con una costante di tempo $\tau = R \cdot C$, inoltre si ottiene un potenziale nel morsetto positivo, dell'amplificatore, pari a:
+	\item $V_{out} = V_{DD}$: La corrente fluisce da destra verso sinistra caricando il condensatore con una costante di tempo $\tau = R \cdot C$; inoltre il potenziale nel morsetto positivo dell'amplificatore è pari a:
 	      \begin{align*}
 		      V^+ = V^+_H \xrightarrow{\mathrm{Hp:}\,R_1 = R_2} \frac{V_{DD}}{2}
 	      \end{align*}
@@ -155,19 +154,19 @@ Si può determinare i tempi un cui $V_{out}$ è alta e bassa, determinando così
 \end{align*}
 Per le quali utilizzando $\left| V_{DD} \right| = \left| V_{SS} \right|$ si ottiene:
 \begin{align*}
-	T_1 = T_2 = \tau \ln\left( \frac{R_2 + 2R_1}{R_2} \right)
+	T_1 = T_2 = \tau \ln\left( \frac{R_2 + 2R_1}{R_2} \right) \xrightarrow{R_1 = R_2} \tau \ln \left( 3 \right)
 \end{align*}
 Questo risultato ci porta concludere che il duty cylce è pari al $50\%$, e la frequenza di oscillazione è pari a $ f = \frac{1}{T_1 + T_2}$, la quale e inversamente proporzionale alla costante di tempo $\tau$.
 
-\noindent I valori utilizzati questo circuito sono indicati a tabella \ref{tab:oscillatore}, a figura \ref{fig:oscillatore} viene mostrato l'andamento dell'uscita al variare di $V^-$. Infine si sono effettuate diverse prove per confermare la relazione $f \propto \sfrac{1}{\tau}$ modificando la resistenza variabile $R$, figura \ref{fig:ocillatore_freq_tau}.
+\noindent I valori utilizzati questo circuito sono indicati a tabella \ref{tab:oscillatore}, a figura \ref{fig:oscillatore} viene mostrato l'andamento dell'uscita al variare di $V^-$. Infine si sono effettuate diverse prove per confermare la relazione $f \propto \sfrac{1}{\tau}$ modificando la resistenza variabile $R$, figura \ref{fig:oscillatore_freq_tau}.
 
-\noindent In particolare questo circuito, mantenendo sempre $\left| V_{DD} \right| = \left| V_{SS} \right|$, avrà sempre un duty cycle pari al $50\%$, se si volesse modificare si potrebbero utilizzare due resistenze diverse, una per la carica e una per la scarica, utilizzando due diodi per far scorrere la corrente nel modo corretto.
+\noindent Mantenendo $\left| V_{DD} \right| = \left| V_{SS} \right|$, l'oscillatore avrà sempre un duty cycle pari al $50\%$, se si volesse modificarlo si potrebbero utilizzare due resistenze diverse, una per la carica e una per la scarica, utilizzando due diodi per far scorrere la corrente nel modo corretto.
 \begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{20pt}
 	\begin{tabular}{c c}
 		\toprule
-		Elemento & Valore               \\
+		\textbf{Grandezza} & \textbf{Valore}               \\
 		\midrule
 		$V_{DD}$ & $10\,V$              \\
 		$R_1$    & $9.0\,K\Omega$       \\
@@ -182,16 +181,16 @@ Questo risultato ci porta concludere che il duty cylce è pari al $50\%$, e la f
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{immagini/ocillatore/oscillatore.PNG}
+	\includegraphics[width=0.7\linewidth]{immagini/oscillatore/oscillatore.PNG}
 	\caption{Schermata dell'oscilloscopio, in giallo $V^-$ mentre in azzurro l'uscita $V_{out}$.}
 	\label{fig:oscillatore}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.6\linewidth]{immagini/ocillatore/freq_tau.png}
+	\includegraphics[width=0.6\linewidth]{immagini/oscillatore/freq_tau.png}
 	\caption{Variazione della frequenza al variare della costante di tempo $\tau$.}
-	\label{fig:ocillatore_freq_tau}
+	\label{fig:oscillatore_freq_tau}
 \end{figure}
 \FloatBarrier
 
@@ -201,8 +200,8 @@ Inoltre, il fronte d'onda ascendente del segnale in uscita è sincronizzato con 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.4\linewidth]{immagini/monostabile/circuito_1.png}
-	\caption{Schematico del circuito monostabile.}
+	\includegraphics[width=0.5\linewidth]{immagini/monostabile/circuito_1.png}
+	\caption{Una prima \textit{implementazione} del monostabile.}
 	\label{fig:schematico_monostabile_1}
 \end{figure}
 
@@ -212,7 +211,7 @@ Di conseguenza, la carica del condensatore si arresta e l’uscita si stabilizza
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\linewidth]{immagini/monostabile/circuito.png}
+	\includegraphics[width=0.6\linewidth]{immagini/monostabile/circuito.png}
 	\caption{Schematico del circuito monostabile.}
 	\label{fig:schematico_monostabile}
 \end{figure}
@@ -226,27 +225,44 @@ La durata dell'impulso $V_{out}$ è definita dalla costante $\tau$ e dalle resis
 	T_{A}=\tau\cdot\ln(1+\dfrac{R_{1}}{R_{2}}) \xrightarrow{R_1 = R_2 \,\text{e}\, \tau = 721\,\mu s } T_A = 499\,\mu s
 \end{align*}
 
-Nella tabella di seguito (tabella \ref{tab:monostabile}) sono presenti i valori dei componenti utilizzati nella realizzazione del circuito.
+\noindent Nella tabella di seguito (tabella \ref{tab:monostabile}) sono presenti i valori dei componenti utilizzati nella realizzazione del circuito.
 \begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{20pt}
-	\begin{tabular}{c c}
+	\begin{tabular}{c c | c c}
 		\toprule
-		Elemento & Valore             \\
+		\textbf{Grandezza} & \textbf{Valore}             & \textbf{Grandezza} & \textbf{Valore}            \\
 		\midrule
-		$freq$   & $100\,\mathrm{Hz}$ \\
-		$V_{DD}$ & $10\,V$            \\
-		$R_1$    & $9.0\,K\Omega$     \\
-		$R_2$    & $9.0\,K\Omega$     \\
-		$R_3$    & $10.3\,K\Omega$    \\
-		$R_4$    & $9.0\,K\Omega$     \\
-		$C$      & $70\,\mathrm{nF}$  \\
-		$C_T$    & $1\,\mathrm{nF}$   \\
+		$freq$   & $100\,\mathrm{Hz}$ & $R_3$    & $10.3\,K\Omega$   \\
+		$V_{DD}$ & $10\,V$            & $R_4$    & $9.0\,K\Omega$    \\
+		$R_1$    & $9.0\,K\Omega$     & $C$      & $70\,\mathrm{nF}$ \\
+		$R_2$    & $9.0\,K\Omega$     & $C_T$    & $1\,\mathrm{nF}$  \\
 		\bottomrule
 	\end{tabular}
 	\caption{Valori utilizzati nel circuito monostabile.}
 	\label{tab:monostabile}
 \end{table}
+
+% \begin{table}[h]
+% 	\centering
+% 	\setlength{\tabcolsep}{20pt}
+% 	\begin{tabular}{c c}
+% 		\toprule
+% 		\textbf{Grandezza} & \textbf{Valore}             \\
+% 		\midrule
+% 		$freq$   & $100\,\mathrm{Hz}$ \\
+% 		$V_{DD}$ & $10\,V$            \\
+% 		$R_1$    & $9.0\,K\Omega$     \\
+% 		$R_2$    & $9.0\,K\Omega$     \\
+% 		$R_3$    & $10.3\,K\Omega$    \\
+% 		$R_4$    & $9.0\,K\Omega$     \\
+% 		$C$      & $70\,\mathrm{nF}$  \\
+% 		$C_T$    & $1\,\mathrm{nF}$   \\
+% 		\bottomrule
+% 	\end{tabular}
+% 	\caption{Valori utilizzati nel circuito monostabile.}
+% 	\label{tab:monostabile}
+% \end{table}
 
 \noindent A figura \ref{fig:monostabile_impulso_durata} viene misurata la durata dell'impulso mentre a figura \ref{fig:monostabile_impulsi} viene mostrata una serie d'impulsi.
 \begin{figure}[h]
