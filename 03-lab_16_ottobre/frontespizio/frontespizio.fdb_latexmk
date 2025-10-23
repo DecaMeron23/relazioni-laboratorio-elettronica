@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1760638737.81194 "/home/emilio/Documenti/universita/laboratorio-elettronica/lab_16_ottobre/frontespizio/frontespizio.tex" "frontespizio.pdf" "frontespizio" 1760638738.06644 0
+["pdflatex"] 1761221237.58767 "/home/emilio/Documenti/universita/laboratorio-elettronica/03-lab_16_ottobre/frontespizio/frontespizio.tex" "frontespizio.pdf" "frontespizio" 1761221238.33927 0
   "/etc/texmf/web2c/texmf.cnf" 1759053305.78582 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/emilio/Documenti/universita/laboratorio-elettronica/lab_16_ottobre/frontespizio/frontespizio.tex" 1760638737.65522 1237 af7191f569b780e9dc0015e459885ccb ""
+  "/home/emilio/Documenti/universita/laboratorio-elettronica/03-lab_16_ottobre/frontespizio/frontespizio.tex" 1761221237.67886 1249 4369582cd53600df612330ea5b890b94 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -79,9 +79,9 @@
   "/usr/share/texmf/tex/latex/lm/t1lmr.fd" 1616454256 1867 996fe743d88a01aca041ed22cc10e1bb ""
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1759054210.85603 165012 f177baa1c39a3ebd62c3096a43521a0d ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1759054245 6832475 747a75af69fb2cfe4eb5969f25a553b5 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1760785982 6832224 1751a113f8ef3e0346231d953ac04f1d ""
   "frontespizio.aux" 1760003235.0862 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "frontespizio.tex" 1760638737.65522 1237 af7191f569b780e9dc0015e459885ccb ""
+  "frontespizio.tex" 1761221237.67886 1249 4369582cd53600df612330ea5b890b94 ""
   "unibg-mark.pdf" 1760002004.56487 16684 c2f751c03a66b145ff202e9c9ada6085 ""
   (generated)
   "frontespizio.aux"

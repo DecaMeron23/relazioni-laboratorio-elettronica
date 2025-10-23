@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.28)  16 OCT 2025 15:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.18)  22 OCT 2025 16:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -344,14 +344,14 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
  ) 
 Here is how much of TeX's memory you used:
  6729 strings out of 476098
- 111566 string characters out of 5793537
+ 111566 string characters out of 5793536
  1925975 words of memory out of 5000000
  28612 multiletter control sequences out of 15000+600000
  606764 words of font info for 88 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  57i,14n,71p,1081b,310s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb>
-Output written on frontespizio.pdf (1 page, 121854 bytes).
+Output written on frontespizio.pdf (1 page, 122198 bytes).
 PDF statistics:
  32 PDF objects out of 1000 (max. 8388607)
  19 compressed objects within 1 object stream
