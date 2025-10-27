@@ -128,5 +128,39 @@ Le \autoref{fig:salita} e \autoref{fig:discesa} mostrano rispettivamente i front
 
 \section{Latch}
 
+Il latch rappresenta una cella di memoria elementare, in grado di mantenere lo stato logico impostato anche dopo la rimozione del segnale di ingresso.  
+Il suo principio di funzionamento si basa sull’impiego di due inverter collegati in cascata e retroazionati, come mostrato nello schema in \autoref{fig:latch_schema}.  
+Quando viene applicato un livello logico 1 all’ingresso del primo inverter, la sua uscita assume valore logico 0, che a sua volta viene invertito dal secondo stadio, restituendo un livello logico 1.  
+Questo valore viene quindi mantenuto grazie all’anello di retroazione, che stabilizza il circuito nello stato logico impostato.  
+Un comportamento analogo si verifica quando viene applicato un livello logico 0: l’uscita del secondo inverter rimane a 0 fino a quando non interviene una nuova scrittura.
+Per consentire la scrittura di uno stato logico, il circuito è stato dotato di due pulsanti: 
+uno collegato alla tensione di alimentazione \textbf{V\textsubscript{DD}} per impostare un livello logico alto, e uno collegato a massa per impostare un livello logico basso. 
+L’uscita è stata collegata a un LED per rendere visibile lo stato memorizzato: come mostrato in \autoref{fig:latch_onoff}, quando l’uscita è a livello logico 1 il LED risulta acceso, mentre con livello logico 0 rimane spento.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{immagini/latch/Latch.png}
+    \caption{Schema circuitale del latch.}
+    \label{fig:latch_schema}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.47\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/latch/off.png}
+        \caption{Uscita logica 0, LED spento.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.47\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/latch/on.png}
+        \caption{Uscita logica 1, LED acceso.}
+    \end{subfigure}
+    \caption{Stati logici  dal latch.}
+    \label{fig:latch_onoff}
+\end{figure}
+
+
+
 \end{document}
 
