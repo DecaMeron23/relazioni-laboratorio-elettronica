@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1761551656.45799 "/home/emilio/Documenti/universita/laboratorio-elettronica/04-lab-23-ottobre/main.tex" "main.pdf" "main" 1761551657.00092 0
+["pdflatex"] 1761551945.50552 "/home/emilio/Documenti/universita/laboratorio-elettronica/04-lab-23-ottobre/main.tex" "main.pdf" "main" 1761551946.04953 0
   "/etc/texmf/web2c/texmf.cnf" 1759053305.78582 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk" 1759408104.0972 49076 434bb39189771acc502db9908067600c ""
   "/home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk" 1759408104.76927 28416 7fa48c1480c7bdcb7ab7cc75175bbcd3 ""
-  "/home/emilio/Documenti/universita/laboratorio-elettronica/04-lab-23-ottobre/main.tex" 1761551655.75183 1185 72e05f64409a524a073c73d79e01ff9d ""
+  "/home/emilio/Documenti/universita/laboratorio-elettronica/04-lab-23-ottobre/main.tex" 1761551945.34899 1185 72e05f64409a524a073c73d79e01ff9d ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm" 1136768653 3584 ad49a18d8515beef6d92d4d3f197d0fd ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1136768653 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
@@ -180,11 +180,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1759054210.85603 165012 f177baa1c39a3ebd62c3096a43521a0d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1760785982 6832224 1751a113f8ef3e0346231d953ac04f1d ""
-  "frontespizio/frontespizio.pdf" 1761231976.85402 122255 2389f3ebe4ee3efee021dde5cafe6c13 ""
-  "main-frn.tex" 1761551656.94647 450 968cc1df2af3d8a37a4f11a0fed4da16 "pdflatex"
-  "main.aux" 1761551656.94566 398 a4d7c8dc1f0b8bf091ea3233d091d8e1 "pdflatex"
-  "main.out" 1761551656.94566 35 9534070c232aa0a3f935cb7c3e3f8d46 "pdflatex"
-  "main.tex" 1761551655.75183 1185 72e05f64409a524a073c73d79e01ff9d ""
+  "frontespizio/frontespizio.pdf" 1761551938.54376 122885 b222e0929222a44d709c60ca9e836d10 ""
+  "main-frn.tex" 1761551945.9866 450 968cc1df2af3d8a37a4f11a0fed4da16 "pdflatex"
+  "main.aux" 1761551945.98583 398 a4d7c8dc1f0b8bf091ea3233d091d8e1 "pdflatex"
+  "main.out" 1761551945.98583 35 9534070c232aa0a3f935cb7c3e3f8d46 "pdflatex"
+  "main.tex" 1761551945.34899 1185 72e05f64409a524a073c73d79e01ff9d ""
   (generated)
   "main-frn.tex"
   "main.aux"
