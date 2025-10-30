@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1761556573.86368 "/home/emilio/Documenti/universita/laboratorio-elettronica/03-lab_16_ottobre/main.tex" "main.pdf" "main" 1761556574.82713 0
+["pdflatex"] 1761833596.93501 "/home/emilio/Documenti/universita/laboratorio-elettronica/03-lab_16_ottobre/main.tex" "main.pdf" "main" 1761833599.57921 0
   "/etc/texmf/web2c/texmf.cnf" 1759053305.78582 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1759408320.35651 31928 415c966344d43c11fa642fda80ca1297 ""
   "/home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk" 1759408104.0972 49076 434bb39189771acc502db9908067600c ""
@@ -8,7 +8,7 @@
   "/home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk" 1759408104.76927 28416 7fa48c1480c7bdcb7ab7cc75175bbcd3 ""
   "/home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk" 1760772355.51616 39096 3f4f05214b0fca044bc08b954883a89d ""
   "/home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk" 1760787156.21655 14040 bde91d49418b4578419d00d473cba702 ""
-  "/home/emilio/Documenti/universita/laboratorio-elettronica/03-lab_16_ottobre/main.tex" 1761556573.68686 13151 b95f27c945e1698018859b83ec88c18a ""
+  "/home/emilio/Documenti/universita/laboratorio-elettronica/03-lab_16_ottobre/main.tex" 1761833595.8072 13402 83614c11000fc3db9790471e2707fe26 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm" 1136768653 3584 ad49a18d8515beef6d92d4d3f197d0fd ""
@@ -242,10 +242,10 @@
   "immagini/schmitt/schmitt_vin_vout.png" 1760641784 22770 e9013c6eab1b01ffbfc90f5aa03814f9 ""
   "immagini/schmitt/schmitt_vin_vout_rumoroso.png" 1760642742 31877 c83843b4cf9988ea47ca72f80d3e0189 ""
   "immagini/schmitt/schmitt_vin_vout_xy.png" 1760641880 20455 9ae60fa5aeb3464b10a1b843d0ba59c7 ""
-  "main-frn.tex" 1761556574.74483 450 968cc1df2af3d8a37a4f11a0fed4da16 "pdflatex"
-  "main.aux" 1761556574.74379 4570 cdbdd0ab548bb7b3fd68f73dfafa9d93 "pdflatex"
-  "main.out" 1761556574.32779 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1761556573.68686 13151 b95f27c945e1698018859b83ec88c18a ""
+  "main-frn.tex" 1761833599.35299 450 968cc1df2af3d8a37a4f11a0fed4da16 "pdflatex"
+  "main.aux" 1761833599.35099 4687 d226d03922d07ea47539b6477a91a1ea "pdflatex"
+  "main.out" 1761833599.35299 131 b9262c9c0fc2b4dae5560f5b8731c809 "pdflatex"
+  "main.tex" 1761833595.8072 13402 83614c11000fc3db9790471e2707fe26 ""
   (generated)
   "main-frn.tex"
   "main.aux"
