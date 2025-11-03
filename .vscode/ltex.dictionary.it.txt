@@ -1,0 +1,7 @@
+oscillator
+inverter
+Oscillator
+latch
+Latch
+clock
+flip-flop

@@ -1,0 +1,7 @@
+{"rule":"GR_04_002","sentence":"^\\QQuesto circuito per funzionare necessita un numero dispari di inverter posti in serie, in questo modo si crea un anello di retroazione negativo facendo oscillare \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q tra il livello logico alto e il livello logico basso\\E$"}
+{"rule":"ST_04_001","sentence":"^\\QUscita logica 0, LED spento.\\E$"}
+{"rule":"ST_04_001","sentence":"^\\QUscita logica 1, LED acceso.\\E$"}
+{"rule":"ST_04_001","sentence":"^\\QUn comportamento analogo si verifica quando viene applicato un livello logico 0: l’uscita del secondo inverter rimane a 0 fino a quando non interviene una nuova scrittura.\\E$"}
+{"rule":"ST_04_001","sentence":"^\\QQuando viene applicato un livello logico 1 all’ingresso del primo inverter, la sua uscita assume valore logico 0, che a sua volta viene invertito dal secondo stadio, restituendo un livello logico 1.\\E$"}
+{"rule":"ST_04_001","sentence":"^\\QL’uscita è stata collegata a un LED per rendere visibile lo stato memorizzato: come mostrato in \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, quando l’uscita è a livello logico 1 il LED risulta acceso, mentre con livello logico 0 rimane spento.\\E$"}
+{"rule":"MORFOLOGIK_RULE_IT_IT","sentence":"^\\QL'obiettivo del divisore in frequenza è quello di ottenere, data una frequenza di riferimento (come il segnale di clock), un altro segnale con\\E$"}

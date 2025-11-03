@@ -33,13 +33,17 @@
 \usepackage{adjustbox}      % per dimensionare le immagini in modo automatico
 
 
+\addto\extrasitalian{\renewcommand{\figureautorefname}{figura}}
+\addto\extrasitalian{\renewcommand{\AMSautorefname}{equazione}}
+\addto\extrasitalian{\renewcommand{\tableautorefname}{tabella}}
+
 \begin{document}
 
 \includepdf{./frontespizio/frontespizio.pdf}
 
 \section*{Circuiti Digitali}
 
-Nei circuiti digitali, a differenza di quelli analogici, il segnale è discretizzato sia nei tempi che nelle ampiezze (figura \ref{fig:digitali-differenza}), in particolare esso può assumere dei valori alti $V_H$ o bassi $V_L$, tipicamente $5\,V$ e $0\,V$.
+Nei circuiti digitali, a differenza di quelli analogici, il segnale è discretizzato sia nei tempi che nelle ampiezze (\autoref{fig:digitali-differenza}), in particolare esso può assumere dei valori alti $V_H$ o bassi $V_L$, tipicamente $5\,V$ e $0\,V$.
 
 \begin{figure}[h]
 	\centering
@@ -50,8 +54,8 @@ Nei circuiti digitali, a differenza di quelli analogici, il segnale è discretiz
 
 I circuiti digitali possono lavorare con due tipologie di logiche:
 \begin{itemize}
-	\item \textbf{Logica Combinatoria}, l'uscita dipende sono dal valore degli ingressi in quell'istante;
-	\item \textbf{Logica Sequenziale}, in questo caso si hanno degli stati interni e quindi per determinare l'uscita non basta conoscere il valore degli ingressi.
+	\item \textbf{Logica Combinatoria}, l'uscita dipende solo dal valore degli ingressi in quell'istante;
+	\item \textbf{Logica Sequenziale}, per determinare l'uscita non basta conoscere il valore degli ingressi in quell'istante in quanto sono presenti stati interni.
 \end{itemize}
 
 \subsection*{Porte Logiche}
@@ -65,10 +69,10 @@ Di seguito si riportano alcune tabelle della verità delle porte logiche più se
 		\begin{tabular}{cc|c}
 			\textbf{A} & \textbf{B} & \textbf{Q} \\
 			\midrule
-			0 & 0 & 0 \\
-			0 & 1 & 0 \\
-			1 & 0 & 0 \\
-			1 & 1 & 1 \\
+			0          & 0          & 0          \\
+			0          & 1          & 0          \\
+			1          & 0          & 0          \\
+			1          & 1          & 1          \\
 		\end{tabular}
 		\caption{AND o prodotto logico}
 	}
@@ -79,10 +83,10 @@ Di seguito si riportano alcune tabelle della verità delle porte logiche più se
 		\begin{tabular}{cc|c}
 			\textbf{A} & \textbf{B} & \textbf{Q} \\
 			\midrule
-			0 & 0 & 0 \\
-			0 & 1 & 1 \\
-			1 & 0 & 1 \\
-			1 & 1 & 1 \\
+			0          & 0          & 0          \\
+			0          & 1          & 1          \\
+			1          & 0          & 1          \\
+			1          & 1          & 1          \\
 		\end{tabular}
 		\caption{OR o somma logica}
 	}
@@ -93,28 +97,28 @@ Di seguito si riportano alcune tabelle della verità delle porte logiche più se
 		\begin{tabular}{c|c}
 			\textbf{A} & \textbf{Q} \\
 			\midrule
-			0 & 1 \\
-			1 & 0 \\
+			0          & 1          \\
+			1          & 0          \\
 		\end{tabular}
 		\caption{Inverter}
 		\label{tab:inverter-tabella-verita}
 	}
 \end{table}
 
-\subsection*{Teorema di Demorgan e mappa di Karnaugh}
-Grazie al teorema di Demorgan, che mette in relazione l'operazione AND con l'operazione OR, e alle mappe di Karnaugh si possono semplificare i circuiti logici. In particolare, le mappe di Karnaugh esprimono una qualsiasi tabella della verità come somma di prodotti (oppure come prodotti di somme) e successivamente sfruttando il teorema di Demorgan il quale dice che:
+\subsection*{Teorema di De Morgan e mappa di Karnaugh}
+Grazie al teorema di De Morgan, che mette in relazione l'operazione AND con l'operazione OR, e alle mappe di Karnaugh si possono semplificare i circuiti logici. In particolare, quest'ultime esprimono una qualsiasi tabella di verità come somma di prodotti (oppure come prodotti di somme) e, successivamente, sfruttando il teorema di De Morgan il quale enuncia:
 \begin{align*}
-	\overline{A + B} = \overline{A} \cdot \overline{B}\\
+	\overline{A + B} = \overline{A} \cdot \overline{B} \\
 	\overline{A \cdot B} = \overline{A} + \overline{B}
 \end{align*}
-Ricaviamo che qualsiasi funzione logica può essere riscritta utilizzando solo porte logiche NAND (oppure NOR). 
+Da ciò, ricaviamo che qualsiasi funzione logica può essere riscritta utilizzando solo porte logiche NAND (oppure NOR).
 
 \section*{Inverter CMOS}
-L'inverter è un circuito digitale in cui l'uscita si trova al livello opposto dell'ingresso tabella \ref{tab:inverter-tabella-verita}. Per testarne il funzionamento è stato realizzato il circuito in \autoref{fig:inverterStatica}:
+L'inverter è un circuito digitale in cui l'uscita si trova al livello opposto dell'ingresso \autoref{tab:inverter-tabella-verita}. Per testarne il funzionamento è stato realizzato il circuito in \autoref{fig:inverterStatica}:
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.4\linewidth]{immagini/inverter/circuitoLogico1Led.png}
+	\includegraphics[width=0.35\linewidth]{immagini/inverter/circuitoLogico1Led.png}
 	\caption{Schematico inverter.}
 	\label{fig:inverterStatica}
 \end{figure}
@@ -124,14 +128,14 @@ L'inverter è un circuito digitale in cui l'uscita si trova al livello opposto d
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.3\linewidth]{immagini/inverter/package-inverter.png}
+	\includegraphics[width=0.35\linewidth]{immagini/inverter/package-inverter.png}
 	\caption{Package Inverter.}
 	\label{fig:inverter-package}
 \end{figure}
 
 
 È stata impostata una $V_{DD}$ di $5\,\mathrm{V}$ con l’obiettivo di verificare la caratteristica statica dell’inverter.
-Per farlo, è stato forzato uno stato logico 0 o 1 all’ingresso dell’inverter e in uscita è stata posta una resistenza con in serie un diodo LED, in modo che, con uscita logica 1, il LED risulti acceso e con uscita logica 0 risulti spento come mostrato in \autoref{fig:statica}.
+Per farlo, è stato forzato uno stato logico 0, o 1, all’ingresso dell’inverter e in uscita è stata posta una resistenza con in serie un diodo LED. Questo fa si che con uscita logica 1, il LED risulti acceso e con uscita logica 0 risulti spento come mostrato in \autoref{fig:statica}.
 
 
 \begin{figure}[h]
@@ -154,7 +158,7 @@ Per farlo, è stato forzato uno stato logico 0 o 1 all’ingresso dell’inverte
 \end{figure}
 
 
-Successivamente andando a modificare il circuito come in \autoref{fig:inverterDinamica}, è stato possibile verificare la caratteristica dinamica collegando l’ingresso del circuito a un generatore di forme d’onda che fornisce un segnale ad onda quadra con un’ampiezza di $5\,\mathrm{V}_{pp}$ e un offset di $2.5\,\mathrm{V}$, simulando la commutazione di un bit tra 0 e 1, per osservare la negazione in uscita.
+Successivamente andando a modificare il circuito come in \autoref{fig:inverterDinamica}, è stato possibile verificare la caratteristica dinamica: collegando l’ingresso a un generatore di forme d’onda e fornendo un segnale ad onda quadra con un’ampiezza di $5\,\mathrm{V}_{pp}$ e un offset di $2.5\,\mathrm{V}$, è possibile osservare la negazione in uscita simulando la commutazione di un bit tra 0 e 1.
 
 \begin{figure}[h]
 	\centering
@@ -175,9 +179,9 @@ Successivamente andando a modificare il circuito come in \autoref{fig:inverterDi
 	\label{fig:inverterDinamica}
 \end{figure}
 
-Infine, sono stati calcolati il tempo di salita, il tempo di discesa e il ritardo di propagazione dell’inverter.
+Infine sono stati calcolati il tempo di salita, il tempo di discesa e il ritardo di propagazione dell’inverter.
 In \autoref{fig:ritardo_propagazione} è riportata la misura del ritardo di propagazione, pari a circa \SI{23.6}{\nano\second}.
-Le \autoref{fig:salita} e \autoref{fig:discesa} mostrano rispettivamente i fronti di salita e discesa del segnale in uscita, con tempi pari a circa \SI{30}{\nano\second} e \SI{20}{\nano\second}.
+Le figure \ref{fig:salita} e \ref{fig:discesa} mostrano rispettivamente i fronti di salita e discesa del segnale in uscita, con tempi pari a circa \SI{30}{\nano\second} e \SI{20}{\nano\second}.
 
 
 \begin{figure}[h]
@@ -217,7 +221,7 @@ Le \autoref{fig:salita} e \autoref{fig:discesa} mostrano rispettivamente i front
 
 \section*{Latch}
 
-Il latch rappresenta una cella di memoria elementare, in grado di mantenere lo stato logico impostato anche dopo la rimozione del segnale di ingresso.
+Il latch rappresenta una cella di memoria elementare, in grado di mantenere lo stato logico fissato anche dopo la rimozione del segnale d'ingresso.
 Il principio di funzionamento è caratterizzato dall’impiego di due inverter collegati in cascata e retroazionati, come mostrato nello schema in \autoref{fig:latch_schema}.
 
 \begin{figure}[h]
@@ -255,7 +259,7 @@ L’uscita è stata collegata a un LED per rendere visibile lo stato memorizzato
 \FloatBarrier
 
 \section*{Ring Oscillator}
-Il Ring Oscillator, figura \ref{fig:ring-oscillator-schematico}, è un circuito che genera un segnale d'onda quadra con una frequenza determinata dal ritardo di propagazione degli inverter. Questo circuito per funzionare necessita un numero dispari di inverter posti in serie, in questo modo si crea un anello di retroazione negativo facendo oscillare $V_{out}$ tra il livello logico alto e il livello logico basso
+Il Ring Oscillator, \autoref{fig:ring-oscillator-schematico}, è un circuito che genera un segnale d'onda quadra con una frequenza determinata dal ritardo di propagazione degli inverter. Questo circuito per funzionare necessita di un numero dispari di inverter posti in serie. Si crea poi un anello di retroazione negativo che porta ad oscillare $V_{out}$ tra il livello logico alto e il livello logico basso.
 
 \begin{figure}[h]
 	\centering
@@ -264,7 +268,7 @@ Il Ring Oscillator, figura \ref{fig:ring-oscillator-schematico}, è un circuito 
 	\label{fig:ring-oscillator-schematico}
 \end{figure}
 
-Questo circuito può generare segnali fino $6\,\mathrm{MHz}$, ma essendo a frequenze così elevate il segnale in uscita non risulta essere un'onda quadta figura \ref{fig:a-oscillatore-ring-oscillator}. Per migliorarne la forma si inserisce in cascata all'uscita due inverter, come in figura \ref{fig:ring-oscillator-schematico-miglirato}, il segnale ricavato si trova a figura \ref{fig:b-oscillatore-ring-oscillator}.
+Questo circuito può generare segnali fino $6\,\mathrm{MHz}$, ma a frequenze così elevate, il segnale in uscita non risulta essere un'onda quadra \autoref{fig:a-oscillatore-ring-oscillator}. Quindi per migliorarne la forma si inseriscono due inverter in cascata all'uscita, come in \autoref{fig:ring-oscillator-schematico-miglirato}. Il segnale ricavato si trova a \autoref{fig:b-oscillatore-ring-oscillator}.
 
 \begin{figure}[h]
 	\centering
@@ -290,13 +294,80 @@ Questo circuito può generare segnali fino $6\,\mathrm{MHz}$, ma essendo a frequ
 	\label{fig:oscillatore-ring-oscillator}
 \end{figure}
 
-Per poter modificare la frequenza di oscillazione si può utilizzare il circuito a figura \ref{fig:ring-oscillator-schematico-freq} 
+Per poter modificare la frequenza di oscillazione si può utilizzare il circuito a \autoref{fig:ring-oscillator-schematico-freq}. Modificando i valori di una resistenza si possono ottenere diverse frequenze come mostrato in \autoref{fig:ring-oscillator-oscillare} e \autoref{fig:ring-oscillator-plot-freq-r}.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{immagini/ring-oscillator/3InverteRes.png}
 	\caption{Schematico del ring oscillator con modifica di frequenza.}
 	\label{fig:ring-oscillator-schematico-freq}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{immagini/ring-oscillator/TEK00108.PNG}
+	\caption{Misurazione frequenza tramite l'oscillatore.}
+	\label{fig:ring-oscillator-oscillare}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{immagini/ring-oscillator/plot-Freq-Res.png}
+	\caption{Variazione della frequenza al variare della resistenza $R_2$}
+	\label{fig:ring-oscillator-plot-freq-r}
+\end{figure}
+
+\section*{Divisore in Frequenza}
+L'obiettivo del divisore in frequenza è quello di ottenere, data una frequenza di riferimento (come il segnale di \textit{clock}), un altro segnale con un periodo pari a quello in ingresso moltiplicato per una potenza di due:
+\begin{align*}
+	T_{out} = 2^n \cdot T_{in}
+\end{align*}
+con $n$ che può cambiare in base a quanti stadi di divisione si inseriscono.
+
+Uno stadio di divisione è costituito da un Flip-Flop tipo D \autoref{fig:divisore-freq-fli-flop-d}. Quest'ultimo rispetta la tabella di verità \ref{tab:divisore-frequenza-flip-flop-d-tabella-verita}. La particolarità di questo circuito è che l'uscita Q (e quindi anche il suo negato $\overline{\mathrm{Q}}$) è sincronizzata sul fronte di salita di un segnale di \textit{clock}.  
+
+\begin{figure}[h]
+	\begin{minipage}[b]{.45\linewidth}
+		\centering
+		\includegraphics[width=0.7\linewidth]{immagini/flip-flop-D/flip-flop-D.png}
+		\captionof{figure}{Flip-Flop tipo D}
+		\label{fig:divisore-freq-fli-flop-d}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{.45\linewidth}
+		\centering
+		\begin{tabular}{c|c c}
+			D & Q & $\overline{\mathrm{Q}}$ \\
+			\midrule
+			0 & 0 & 1\\
+			1 & 1 & 0\\
+		\end{tabular}
+		\captionof{table}{Tabella verità flip-flop tipo D}
+		\label{tab:divisore-frequenza-flip-flop-d-tabella-verita}
+	\end{minipage}
+\end{figure}
+
+Il modello circuitale del divisore in frequenza a \autoref{fig:divisione-in-frequenza-schematico} è caratterizzato dal prelevare l'uscita negata $\overline{\mathrm{Q}}$ e portarla all'ingresso D. In aggiunta il segnale di clock è portato al rispettivo pin.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.45\linewidth]{immagini/flip-flop-D/schematico-divisore-frequenza.png}
+	\caption{Schematico divisore in frequenza.}
+	\label{fig:divisione-in-frequenza-schematico}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{immagini/flip-flop-D/oscillatore-divisiore-frequenza.PNG}
+	\caption{Misure del divisore in frequenza.}
+	\label{fig:divisore-frequenza-oscilloscopio}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{immagini/flip-flop-D/esempio-divisore-freq.png}
+	\caption{Esempio di divisore in frequenza.}
+	\label{fig:divisore-frequenza-esempio}
 \end{figure}
 
 \end{document}
