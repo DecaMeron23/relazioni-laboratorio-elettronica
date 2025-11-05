@@ -135,30 +135,28 @@ L'inverter è un circuito digitale in cui l'uscita si trova al livello opposto d
 
 
 È stata impostata una $V_{DD}$ di $5\,\mathrm{V}$ con l’obiettivo di verificare la caratteristica statica dell’inverter.
-Per farlo, è stato forzato uno stato logico 0, o 1, all’ingresso dell’inverter e in uscita è stata posta una resistenza con in serie un diodo LED. Questo fa si che con uscita logica 1, il LED risulti acceso e con uscita logica 0 risulti spento come mostrato in \autoref{fig:statica}.
+Per farlo, è stato forzato uno stato logico 0, o 1, all’ingresso dell’inverter e in uscita è stata posta una resistenza con in serie un diodo LED. Questo fa si che con uscita logica 1, il LED risulti acceso e con uscita logica 0 risulti spento. % come mostrato in \autoref{fig:statica}.
 
 
-\begin{figure}[h]
-	\centering
-	\begin{subfigure}[b]{0.40\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{immagini/inverter/on.png}
-		\caption{Uscita logica 1 - LED acceso}
-		\label{fig:led_on}
-	\end{subfigure}
-	\quad
-	\begin{subfigure}[b]{0.40\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{immagini/inverter/off.png}
-		\caption{Uscita logica 0 - LED spento}
-		\label{fig:led_off}
-	\end{subfigure}
-	\caption{Verifica della caratteristica statica dell'inverter tramite LED}
-	\label{fig:statica}
-\end{figure}
-
-
-Successivamente andando a modificare il circuito come in \autoref{fig:inverterDinamica}, è stato possibile verificare la caratteristica dinamica: collegando l’ingresso a un generatore di forme d’onda e fornendo un segnale ad onda quadra con un’ampiezza di $5\,\mathrm{V}_{pp}$ e un offset di $2.5\,\mathrm{V}$, è possibile osservare la negazione in uscita simulando la commutazione di un bit tra 0 e 1.
+% \begin{figure}[h]
+% 	\centering
+% 	\begin{subfigure}[b]{0.40\textwidth}
+% 		\centering
+% 		\includegraphics[width=\textwidth]{immagini/inverter/on.png}
+% 		\caption{Uscita logica 1 - LED acceso}
+% 		\label{fig:led_on}
+% 	\end{subfigure}
+% 	\quad
+% 	\begin{subfigure}[b]{0.40\textwidth}
+% 		\centering
+% 		\includegraphics[width=\textwidth]{immagini/inverter/off.png}
+% 		\caption{Uscita logica 0 - LED spento}
+% 		\label{fig:led_off}
+% 	\end{subfigure}
+% 	\caption{Verifica della caratteristica statica dell'inverter tramite LED}
+% 	\label{fig:statica}
+% \end{figure}
+% ! Fiugre rimosse perché non hanno il collegamento a massa
 
 \begin{figure}[h]
 	\centering
@@ -166,18 +164,21 @@ Successivamente andando a modificare il circuito come in \autoref{fig:inverterDi
 		\centering
 		\includegraphics[width=\linewidth]{immagini/inverter/circuitoLogico1NoLed.png}
 		\caption{Schematico dell'inverter per la verifica della caratteristica dinamica.}
-		\label{fig:inverterDinamica}
+		\label{subfig:inverter-dinamico-schematico}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{immagini/inverter/TEK00099.PNG}
 		\caption{Caratteristica dinamica dell'inverter.}
-		\label{grafico}
+		\label{subfig:inverter-dinamico-grafico}
 	\end{subfigure}
 	\caption{Verifica della caratteristica dinamica dell'inverter: a sinistra lo schema del circuito, a destra la risposta osservata all'oscilloscopio.}
-	\label{fig:inverterDinamica}
+	\label{fig:inverter-dinamico}
 \end{figure}
+
+Successivamente andando a modificare il circuito come in \autoref{fig:inverter-dinamico}, è stato possibile verificare la caratteristica dinamica: collegando l’ingresso a un generatore di forme d’onda e fornendo un segnale ad onda quadra con un’ampiezza di $5\,\mathrm{V}_{pp}$ e un offset di $2.5\,\mathrm{V}$, è possibile osservare la negazione in uscita simulando la commutazione di un bit tra 0 e 1.
+
 
 Infine sono stati calcolati il tempo di salita, il tempo di discesa e il ritardo di propagazione dell’inverter.
 In \autoref{fig:ritardo_propagazione} è riportata la misura del ritardo di propagazione, pari a circa \SI{23.6}{\nano\second}.
@@ -188,28 +189,28 @@ Le figure \ref{fig:salita} e \ref{fig:discesa} mostrano rispettivamente i fronti
 	\centering
 	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{immagini/inverter/TEK00100.PNG}
+		\includegraphics[width=.95\linewidth]{immagini/inverter/TEK00100.PNG}
 		\caption{Ritardo di propagazione (\SI{23.6}{\nano\second}).}
 		\label{fig:ritardo_propagazione}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{immagini/inverter/TEK00101.PNG}
+		\includegraphics[width=.95\linewidth]{immagini/inverter/TEK00101.PNG}
 		\caption{Transizioni complete.}
 		\label{fig:transizioni_complete}
 	\end{subfigure}
 	\\[1em]
 	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{immagini/inverter/TEK00102.PNG}
+		\includegraphics[width=.95\linewidth]{immagini/inverter/TEK00102.PNG}
 		\caption{Tempo di salita (\SI{30}{\nano\second}).}
 		\label{fig:salita}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{immagini/inverter/TEK00103.PNG}
+		\includegraphics[width=.95\linewidth]{immagini/inverter/TEK00103.PNG}
 		\caption{Tempo di discesa (\SI{20}{\nano\second}).}
 		\label{fig:discesa}
 	\end{subfigure}
@@ -226,7 +227,7 @@ Il principio di funzionamento è caratterizzato dall’impiego di due inverter c
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\linewidth]{immagini/latch/Latch.png}
+	\includegraphics[width=0.32\linewidth]{immagini/latch/Latch.png}
 	\caption{Schema circuitale del latch.}
 	\label{fig:latch_schema}
 \end{figure}
@@ -281,13 +282,13 @@ Questo circuito può generare segnali fino $6\,\mathrm{MHz}$, ma a frequenze cos
 	\centering
 	\begin{subfigure}{0.45\linewidth}
 		\includegraphics[width = \linewidth]{immagini/ring-oscillator/ring-oscillator-oscillatore.png}
-		\caption{Segnale in uscita dallo stadio del ring oscillator.}
+		\caption{}
 		\label{fig:a-oscillatore-ring-oscillator}
 	\end{subfigure}
 	\quad
 	\begin{subfigure}{0.45\linewidth}
 		\includegraphics[width = \linewidth]{immagini/ring-oscillator/ring-oscillator-uscita-doppio-inverter-oscillatore.png}
-		\caption{Segnale in uscita dallo stadio del ring oscillator.}
+		\caption{}
 		\label{fig:b-oscillatore-ring-oscillator}
 	\end{subfigure}
 	\caption{Segnali generati dal ring oscillator.}
@@ -312,10 +313,12 @@ Per poter modificare la frequenza di oscillazione si può utilizzare il circuito
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.6\linewidth]{immagini/ring-oscillator/plot-Freq-Res.png}
+	\includegraphics[width=0.5\linewidth]{immagini/ring-oscillator/plot-Freq-Res.png}
 	\caption{Variazione della frequenza al variare della resistenza $R_2$}
 	\label{fig:ring-oscillator-plot-freq-r}
 \end{figure}
+
+\FloatBarrier
 
 \section*{Divisore in Frequenza}
 L'obiettivo del divisore in frequenza è quello di ottenere, data una frequenza di riferimento (come il segnale di \textit{clock}), un altro segnale con un periodo pari a quello in ingresso moltiplicato per una potenza di due:
@@ -347,8 +350,14 @@ Uno stadio di divisione è costituito da un Flip-Flop tipo D \autoref{fig:diviso
 	\end{minipage}
 \end{figure}
 
-Il modello circuitale del divisore in frequenza a \autoref{fig:divisione-in-frequenza-schematico} è caratterizzato dal prelevare l'uscita negata $\overline{\mathrm{Q}}$ e portarla all'ingresso D. In aggiunta il segnale di clock è portato al rispettivo pin.
+Il modello circuitale del divisore in frequenza a \autoref{fig:divisione-in-frequenza-schematico} è caratterizzato dal prelevare l'uscita negata $\overline{\mathrm{Q}}$ e portarla all'ingresso D. In aggiunta il segnale di \textit{clock} è portato al rispettivo pin. 
 
+\noindent Ipotizzando uno stato di partenza in cui $Q = 0$ e $D = \overline{Q} = 1$, questo fa si che:
+\begin{itemize}
+	\item Quando il \textit{clock} effettua un fronte di salita, l'uscita $Q$ si aggiorna al valore che assumeva $D$, ovvero livello logico alto. Si veda \autoref{fig:divisore-frequenza-esempio} al tempo $t =\,$\SI{0}{\milli\second};
+	\item Al successivo fronte di salita, dato che $D = \overline{Q} = 0$, si ottiene che $Q$ viene posta a zero. Si veda \autoref{fig:divisore-frequenza-esempio} al tempo $t=\,$\SI{20}{\milli\second}.
+\end{itemize}
+In questo modo, a seguito di due periodi del clock, l'uscita $Q$ ha eseguito un solo periodo. La prova effettuata è mostrata a figura \autoref{fig:divisore-frequenza-oscilloscopio}.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.45\linewidth]{immagini/flip-flop-D/schematico-divisore-frequenza.png}

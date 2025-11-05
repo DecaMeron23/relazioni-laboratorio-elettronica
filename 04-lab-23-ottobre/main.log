@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.18)  31 OCT 2025 18:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.18)  5 NOV 2025 14:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -668,11 +668,7 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \sift@deathcycles=\count345
 \@vwid@loff=\dimen317
 \@vwid@roff=\dimen318
-)) (./main.aux
-
-LaTeX Warning: Label `fig:inverterDinamica' multiply defined.
-
-)
+)) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
@@ -798,185 +794,161 @@ File: immagini/inverter/package-inverter.png Graphic file (type png)
 Package pdftex.def Info: immagini/inverter/package-inverter.png  used on input line 131.
 (pdftex.def)             Requested size: 136.50238pt x 74.15962pt.
  [3 <./immagini/inverter/circuitoLogico1Led.png> <./immagini/inverter/package-inverter.png>]
-<immagini/inverter/on.png, id=82, 1505.625pt x 2007.5pt>
-File: immagini/inverter/on.png Graphic file (type png)
-<use immagini/inverter/on.png>
-Package pdftex.def Info: immagini/inverter/on.png  used on input line 145.
-(pdftex.def)             Requested size: 155.99762pt x 207.99089pt.
-<immagini/inverter/off.png, id=83, 1505.625pt x 2007.5pt>
-File: immagini/inverter/off.png Graphic file (type png)
-<use immagini/inverter/off.png>
-Package pdftex.def Info: immagini/inverter/off.png  used on input line 152.
-(pdftex.def)             Requested size: 155.99762pt x 207.99089pt.
-<immagini/inverter/circuitoLogico1NoLed.png, id=85, 215.80624pt x 111.41624pt>
+<immagini/inverter/circuitoLogico1NoLed.png, id=81, 166.9437pt x 69.3792pt>
 File: immagini/inverter/circuitoLogico1NoLed.png Graphic file (type png)
 <use immagini/inverter/circuitoLogico1NoLed.png>
-Package pdftex.def Info: immagini/inverter/circuitoLogico1NoLed.png  used on input line 167.
-(pdftex.def)             Requested size: 175.49881pt x 90.60876pt.
-<immagini/inverter/TEK00099.PNG, id=86, 803.0pt x 481.8pt>
+Package pdftex.def Info: immagini/inverter/circuitoLogico1NoLed.png  used on input line 165.
+(pdftex.def)             Requested size: 175.49881pt x 72.93604pt.
+<immagini/inverter/TEK00099.PNG, id=82, 803.0pt x 481.8pt>
 File: immagini/inverter/TEK00099.PNG Graphic file (type png)
 <use immagini/inverter/TEK00099.PNG>
-Package pdftex.def Info: immagini/inverter/TEK00099.PNG  used on input line 174.
+Package pdftex.def Info: immagini/inverter/TEK00099.PNG  used on input line 172.
 (pdftex.def)             Requested size: 175.49881pt x 105.29791pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<immagini/inverter/TEK00100.PNG, id=90, 803.0pt x 481.8pt>
+<immagini/inverter/TEK00100.PNG, id=87, 803.0pt x 481.8pt>
 File: immagini/inverter/TEK00100.PNG Graphic file (type png)
 <use immagini/inverter/TEK00100.PNG>
-Package pdftex.def Info: immagini/inverter/TEK00100.PNG  used on input line 191.
-(pdftex.def)             Requested size: 187.19833pt x 112.31876pt.
-<immagini/inverter/TEK00101.PNG, id=91, 803.0pt x 481.8pt>
+Package pdftex.def Info: immagini/inverter/TEK00100.PNG  used on input line 192.
+(pdftex.def)             Requested size: 177.83784pt x 106.70207pt.
+<immagini/inverter/TEK00101.PNG, id=88, 803.0pt x 481.8pt>
 File: immagini/inverter/TEK00101.PNG Graphic file (type png)
 <use immagini/inverter/TEK00101.PNG>
-Package pdftex.def Info: immagini/inverter/TEK00101.PNG  used on input line 198.
-(pdftex.def)             Requested size: 187.19833pt x 112.31876pt.
-<immagini/inverter/TEK00102.PNG, id=92, 803.0pt x 481.8pt>
+Package pdftex.def Info: immagini/inverter/TEK00101.PNG  used on input line 199.
+(pdftex.def)             Requested size: 177.83784pt x 106.70207pt.
+<immagini/inverter/TEK00102.PNG, id=89, 803.0pt x 481.8pt>
 File: immagini/inverter/TEK00102.PNG Graphic file (type png)
 <use immagini/inverter/TEK00102.PNG>
-Package pdftex.def Info: immagini/inverter/TEK00102.PNG  used on input line 205.
-(pdftex.def)             Requested size: 187.19833pt x 112.31876pt.
-<immagini/inverter/TEK00103.PNG, id=93, 803.0pt x 481.8pt>
+Package pdftex.def Info: immagini/inverter/TEK00102.PNG  used on input line 206.
+(pdftex.def)             Requested size: 177.83784pt x 106.70207pt.
+<immagini/inverter/TEK00103.PNG, id=90, 803.0pt x 481.8pt>
 File: immagini/inverter/TEK00103.PNG Graphic file (type png)
 <use immagini/inverter/TEK00103.PNG>
-Package pdftex.def Info: immagini/inverter/TEK00103.PNG  used on input line 212.
-(pdftex.def)             Requested size: 187.19833pt x 112.31876pt.
+Package pdftex.def Info: immagini/inverter/TEK00103.PNG  used on input line 213.
+(pdftex.def)             Requested size: 177.83784pt x 106.70207pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4 <./immagini/inverter/on.png> <./immagini/inverter/off.png>] [5 <./immagini/inverter/circuitoLogico1NoLed.png> <./immagini/inverter/TEK00099.PNG (PNG copy)> <./immagini/inverter/TEK00100.PNG (PNG copy)> <./immagini/inverter/TEK00101.PNG (PNG copy)> <./immagini/inverter/TEK00102.PNG (PNG copy)> <./immagini/inverter/TEK00103.PNG (PNG copy)>]
-<immagini/latch/Latch.png, id=110, 354.32375pt x 307.1475pt>
+[4 <./immagini/inverter/circuitoLogico1NoLed.png> <./immagini/inverter/TEK00099.PNG (PNG copy)>]
+<immagini/latch/Latch.png, id=100, 354.32375pt x 307.1475pt>
 File: immagini/latch/Latch.png Graphic file (type png)
 <use immagini/latch/Latch.png>
-Package pdftex.def Info: immagini/latch/Latch.png  used on input line 229.
-(pdftex.def)             Requested size: 195.0pt x 169.03943pt.
-<immagini/latch/off.png, id=112, 1505.625pt x 2007.5pt>
+Package pdftex.def Info: immagini/latch/Latch.png  used on input line 230.
+(pdftex.def)             Requested size: 124.80286pt x 108.1828pt.
+ [5 <./immagini/inverter/TEK00100.PNG (PNG copy)> <./immagini/inverter/TEK00101.PNG (PNG copy)> <./immagini/inverter/TEK00102.PNG (PNG copy)> <./immagini/inverter/TEK00103.PNG (PNG copy)> <./immagini/latch/Latch.png>]
+<immagini/latch/off.png, id=111, 1505.625pt x 2007.5pt>
 File: immagini/latch/off.png Graphic file (type png)
 <use immagini/latch/off.png>
-Package pdftex.def Info: immagini/latch/off.png  used on input line 245.
+Package pdftex.def Info: immagini/latch/off.png  used on input line 246.
 (pdftex.def)             Requested size: 175.49881pt x 233.99742pt.
-<immagini/latch/on.png, id=113, 1505.625pt x 2007.5pt>
+<immagini/latch/on.png, id=112, 1505.625pt x 2007.5pt>
 File: immagini/latch/on.png Graphic file (type png)
 <use immagini/latch/on.png>
-Package pdftex.def Info: immagini/latch/on.png  used on input line 251.
+Package pdftex.def Info: immagini/latch/on.png  used on input line 252.
 (pdftex.def)             Requested size: 175.49881pt x 233.99742pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[6
-
- <./immagini/latch/Latch.png>]
-<immagini/ring-oscillator/ring-oscillator-schematico.png, id=123, 283.2984pt x 93.951pt>
+<immagini/ring-oscillator/ring-oscillator-schematico.png, id=114, 283.2984pt x 93.951pt>
 File: immagini/ring-oscillator/ring-oscillator-schematico.png Graphic file (type png)
 <use immagini/ring-oscillator/ring-oscillator-schematico.png>
-Package pdftex.def Info: immagini/ring-oscillator/ring-oscillator-schematico.png  used on input line 266.
+Package pdftex.def Info: immagini/ring-oscillator/ring-oscillator-schematico.png  used on input line 267.
 (pdftex.def)             Requested size: 234.00238pt x 77.60228pt.
-<immagini/ring-oscillator/3InverterNoRes.png, id=127, 411.939pt x 94.6737pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6 <./immagini/latch/off.png> <./immagini/latch/on.png>]
+<immagini/ring-oscillator/3InverterNoRes.png, id=125, 411.939pt x 94.6737pt>
 File: immagini/ring-oscillator/3InverterNoRes.png Graphic file (type png)
 <use immagini/ring-oscillator/3InverterNoRes.png>
-Package pdftex.def Info: immagini/ring-oscillator/3InverterNoRes.png  used on input line 275.
+Package pdftex.def Info: immagini/ring-oscillator/3InverterNoRes.png  used on input line 276.
 (pdftex.def)             Requested size: 272.99881pt x 62.74052pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<immagini/ring-oscillator/ring-oscillator-oscillatore.png, id=128, 803.0pt x 481.8pt>
+<immagini/ring-oscillator/ring-oscillator-oscillatore.png, id=126, 803.0pt x 481.8pt>
 File: immagini/ring-oscillator/ring-oscillator-oscillatore.png Graphic file (type png)
 <use immagini/ring-oscillator/ring-oscillator-oscillatore.png>
-Package pdftex.def Info: immagini/ring-oscillator/ring-oscillator-oscillatore.png  used on input line 283.
+Package pdftex.def Info: immagini/ring-oscillator/ring-oscillator-oscillatore.png  used on input line 284.
 (pdftex.def)             Requested size: 175.49881pt x 105.29791pt.
-<immagini/ring-oscillator/ring-oscillator-uscita-doppio-inverter-oscillatore.png, id=129, 803.0pt x 481.8pt>
+<immagini/ring-oscillator/ring-oscillator-uscita-doppio-inverter-oscillatore.png, id=127, 803.0pt x 481.8pt>
 File: immagini/ring-oscillator/ring-oscillator-uscita-doppio-inverter-oscillatore.png Graphic file (type png)
 <use immagini/ring-oscillator/ring-oscillator-uscita-doppio-inverter-oscillatore.png>
-Package pdftex.def Info: immagini/ring-oscillator/ring-oscillator-uscita-doppio-inverter-oscillatore.png  used on input line 289.
+Package pdftex.def Info: immagini/ring-oscillator/ring-oscillator-uscita-doppio-inverter-oscillatore.png  used on input line 290.
 (pdftex.def)             Requested size: 175.49881pt x 105.29791pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[7 <./immagini/latch/off.png> <./immagini/latch/on.png> <./immagini/ring-oscillator/ring-oscillator-schematico.png>]
-<immagini/ring-oscillator/3InverteRes.png, id=143, 416.2752pt x 96.8418pt>
+<immagini/ring-oscillator/3InverteRes.png, id=131, 416.2752pt x 96.8418pt>
 File: immagini/ring-oscillator/3InverteRes.png Graphic file (type png)
 <use immagini/ring-oscillator/3InverteRes.png>
-Package pdftex.def Info: immagini/ring-oscillator/3InverteRes.png  used on input line 301.
+Package pdftex.def Info: immagini/ring-oscillator/3InverteRes.png  used on input line 302.
 (pdftex.def)             Requested size: 272.99881pt x 63.51236pt.
-<immagini/ring-oscillator/TEK00108.PNG, id=144, 803.0pt x 481.8pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<immagini/ring-oscillator/TEK00108.PNG, id=132, 803.0pt x 481.8pt>
 File: immagini/ring-oscillator/TEK00108.PNG Graphic file (type png)
 <use immagini/ring-oscillator/TEK00108.PNG>
-Package pdftex.def Info: immagini/ring-oscillator/TEK00108.PNG  used on input line 308.
+Package pdftex.def Info: immagini/ring-oscillator/TEK00108.PNG  used on input line 309.
 (pdftex.def)             Requested size: 195.0pt x 117.00177pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<immagini/ring-oscillator/plot-Freq-Res.png, id=145, 419.166pt x 312.2064pt>
+<immagini/ring-oscillator/plot-Freq-Res.png, id=133, 419.166pt x 312.2064pt>
 File: immagini/ring-oscillator/plot-Freq-Res.png Graphic file (type png)
 <use immagini/ring-oscillator/plot-Freq-Res.png>
-Package pdftex.def Info: immagini/ring-oscillator/plot-Freq-Res.png  used on input line 315.
-(pdftex.def)             Requested size: 234.00238pt x 174.2913pt.
+Package pdftex.def Info: immagini/ring-oscillator/plot-Freq-Res.png  used on input line 316.
+(pdftex.def)             Requested size: 195.0pt x 145.24117pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8 <./immagini/ring-oscillator/3InverterNoRes.png> <./immagini/ring-oscillator/ring-oscillator-oscillatore.png (PNG copy)> <./immagini/ring-oscillator/ring-oscillator-uscita-doppio-inverter-oscillatore.png (PNG copy)> <./immagini/ring-oscillator/3InverteRes.png>]
-<immagini/flip-flop-D/flip-flop-D.png, id=159, 78.7743pt x 58.5387pt>
+[7 <./immagini/ring-oscillator/ring-oscillator-schematico.png> <./immagini/ring-oscillator/3InverterNoRes.png> <./immagini/ring-oscillator/ring-oscillator-oscillatore.png (PNG copy)> <./immagini/ring-oscillator/ring-oscillator-uscita-doppio-inverter-oscillatore.png (PNG copy)>] [8 <./immagini/ring-oscillator/3InverteRes.png> <./immagini/ring-oscillator/TEK00108.PNG (PNG copy)> <./immagini/ring-oscillator/plot-Freq-Res.png>]
+<immagini/flip-flop-D/flip-flop-D.png, id=155, 78.7743pt x 58.5387pt>
 File: immagini/flip-flop-D/flip-flop-D.png Graphic file (type png)
 <use immagini/flip-flop-D/flip-flop-D.png>
-Package pdftex.def Info: immagini/flip-flop-D/flip-flop-D.png  used on input line 332.
+Package pdftex.def Info: immagini/flip-flop-D/flip-flop-D.png  used on input line 335.
 (pdftex.def)             Requested size: 122.84862pt x 91.2914pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<immagini/flip-flop-D/schematico-divisore-frequenza.png, id=161, 89.6148pt x 70.8246pt>
+<immagini/flip-flop-D/schematico-divisore-frequenza.png, id=160, 89.6148pt x 70.8246pt>
 File: immagini/flip-flop-D/schematico-divisore-frequenza.png Graphic file (type png)
 <use immagini/flip-flop-D/schematico-divisore-frequenza.png>
-Package pdftex.def Info: immagini/flip-flop-D/schematico-divisore-frequenza.png  used on input line 354.
+Package pdftex.def Info: immagini/flip-flop-D/schematico-divisore-frequenza.png  used on input line 363.
 (pdftex.def)             Requested size: 175.49881pt x 138.70822pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<immagini/flip-flop-D/oscillatore-divisiore-frequenza.PNG, id=162, 803.0pt x 481.8pt>
+<immagini/flip-flop-D/oscillatore-divisiore-frequenza.PNG, id=161, 803.0pt x 481.8pt>
 File: immagini/flip-flop-D/oscillatore-divisiore-frequenza.PNG Graphic file (type png)
 <use immagini/flip-flop-D/oscillatore-divisiore-frequenza.PNG>
-Package pdftex.def Info: immagini/flip-flop-D/oscillatore-divisiore-frequenza.PNG  used on input line 361.
+Package pdftex.def Info: immagini/flip-flop-D/oscillatore-divisiore-frequenza.PNG  used on input line 370.
 (pdftex.def)             Requested size: 195.0pt x 117.00177pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<immagini/flip-flop-D/esempio-divisore-freq.png, id=163, 357.9774pt x 292.33215pt>
+<immagini/flip-flop-D/esempio-divisore-freq.png, id=162, 357.9774pt x 292.33215pt>
 File: immagini/flip-flop-D/esempio-divisore-freq.png Graphic file (type png)
 <use immagini/flip-flop-D/esempio-divisore-freq.png>
-Package pdftex.def Info: immagini/flip-flop-D/esempio-divisore-freq.png  used on input line 368.
+Package pdftex.def Info: immagini/flip-flop-D/esempio-divisore-freq.png  used on input line 377.
 (pdftex.def)             Requested size: 195.0pt x 159.24425pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[9 <./immagini/ring-oscillator/TEK00108.PNG (PNG copy)> <./immagini/ring-oscillator/plot-Freq-Res.png>] [10 <./immagini/flip-flop-D/flip-flop-D.png> <./immagini/flip-flop-D/schematico-divisore-frequenza.png> <./immagini/flip-flop-D/oscillatore-divisiore-frequenza.PNG (PNG copy)>] [11 <./immagini/flip-flop-D/esempio-divisore-freq.png>] (./main.aux)
+[9
+
+ <./immagini/flip-flop-D/flip-flop-D.png>] [10 <./immagini/flip-flop-D/schematico-divisore-frequenza.png> <./immagini/flip-flop-D/oscillatore-divisiore-frequenza.PNG (PNG copy)> <./immagini/flip-flop-D/esempio-divisore-freq.png>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29442 strings out of 476098
- 599283 string characters out of 5793536
+ 29422 strings out of 476098
+ 598852 string characters out of 5793536
  1934975 words of memory out of 5000000
- 50925 multiletter control sequences out of 15000+600000
+ 50907 multiletter control sequences out of 15000+600000
  573745 words of font info for 76 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  99i,17n,101p,540b,1142s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb>
-Output written on main.pdf (11 pages, 13174355 bytes).
+Output written on main.pdf (10 pages, 7643773 bytes).
 PDF statistics:
- 432 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 423 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 148 words of extra memory for PDF output out of 10000 (max. 10000000)
 
