@@ -69,10 +69,10 @@ Di seguito si riportano alcune tabelle della verità delle porte logiche più se
 		\begin{tabular}{cc|c}
 			\textbf{A} & \textbf{B} & \textbf{Q} \\
 			\midrule
-			0          & 0          & 0          \\
-			0          & 1          & 0          \\
-			1          & 0          & 0          \\
-			1          & 1          & 1          \\
+			$0$        & $0$        & $0$        \\
+			$0$        & $1$        & $0$        \\
+			$1$        & $0$        & $0$        \\
+			$1$        & $1$        & $1$        \\
 		\end{tabular}
 		\caption{AND o prodotto logico}
 	}
@@ -83,10 +83,10 @@ Di seguito si riportano alcune tabelle della verità delle porte logiche più se
 		\begin{tabular}{cc|c}
 			\textbf{A} & \textbf{B} & \textbf{Q} \\
 			\midrule
-			0          & 0          & 0          \\
-			0          & 1          & 1          \\
-			1          & 0          & 1          \\
-			1          & 1          & 1          \\
+			$0$        & $0$        & $0$        \\
+			$0$        & $1$        & $1$        \\
+			$1$        & $0$        & $1$        \\
+			$1$        & $1$        & $1$        \\
 		\end{tabular}
 		\caption{OR o somma logica}
 	}
@@ -97,8 +97,8 @@ Di seguito si riportano alcune tabelle della verità delle porte logiche più se
 		\begin{tabular}{c|c}
 			\textbf{A} & \textbf{Q} \\
 			\midrule
-			0          & 1          \\
-			1          & 0          \\
+			$0$        & $1$        \\
+			$1$        & $0$        \\
 		\end{tabular}
 		\caption{Inverter}
 		\label{tab:inverter-tabella-verita}
@@ -106,7 +106,7 @@ Di seguito si riportano alcune tabelle della verità delle porte logiche più se
 \end{table}
 
 \subsection*{Teorema di De Morgan e mappa di Karnaugh}
-Grazie al teorema di De Morgan, che mette in relazione l'operazione AND con l'operazione OR, e alle mappe di Karnaugh si possono semplificare i circuiti logici. In particolare, quest'ultime esprimono una qualsiasi tabella di verità come somma di prodotti (oppure come prodotti di somme) e successivamente, sfruttando il teorema di De Morgan che presenta il seguente enunciato
+Grazie al teorema di De Morgan, che mette in relazione l'operazione AND con l'operazione OR, e alle mappe di Karnaugh si possono semplificare i circuiti logici. In particolare, quest'ultime esprimono una qualsiasi tabella di verità come somma di prodotti (oppure come prodotti di somme) e successivamente, sfruttando il teorema di De Morgan che presenta il seguente enunciato:
 \begin{align*}
 	\overline{A + B} = \overline{A} \cdot \overline{B} \\
 	\overline{A \cdot B} = \overline{A} + \overline{B}
@@ -124,7 +124,7 @@ L'inverter è un circuito digitale la cui uscita assume lo stato logico compleme
 \end{figure}
 
 
-\noindent Si è utilizzato il circuito integrato \textbf{CB4069}, il quale è dotato di 14 pin e contiene 6 inverter CMOS come illustrato in  \autoref{fig:inverter-package}.
+\noindent Si è utilizzato il circuito integrato \textbf{CB4069}, il quale è dotato di 14 pin e contiene $6$ inverter CMOS come illustrato in  \autoref{fig:inverter-package}.
 
 \begin{figure}[h]
 	\centering
@@ -135,7 +135,7 @@ L'inverter è un circuito digitale la cui uscita assume lo stato logico compleme
 
 
 È stata impostata una tensione di alimentazione $V_{DD}=5\,\mathrm{V}$ con l’obiettivo di verificare la caratteristica statica dell’inverter.
-Inoltre è stato forzato uno stato logico 0 (oppure 1) all’ingresso dell’inverter ponenedo in uscita una resistenza con in serie un diodo LED. Questo ha fatto si che con uscita logica pari ad 1, il LED risultasse acceso e con uscita logica pari a 0 risultasse spento. % come mostrato in \autoref{fig:statica}.
+Inoltre è stato forzato uno stato logico $0$ (oppure $1$) all’ingresso dell’inverter ponendo in uscita una resistenza con in serie un diodo LED. Questo ha fatto si che con uscita logica pari ad $1$, il LED risultasse acceso e con uscita logica pari a $0$ risultasse spento. % come mostrato in \autoref{fig:statica}.
 
 
 % \begin{figure}[h]
@@ -160,16 +160,16 @@ Inoltre è stato forzato uno stato logico 0 (oppure 1) all’ingresso dell’inv
 
 \begin{figure}[h]
 	\centering
-	\begin{subfigure}[b]{0.45\textwidth}
+	\begin{subfigure}[b]{\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{immagini/inverter/circuitoLogico1NoLed.png}
+		\includegraphics[width=0.50\linewidth]{immagini/inverter/circuitoLogico1NoLed.png}
 		\caption{Schematico dell'inverter per la verifica della caratteristica dinamica.}
 		\label{subfig:inverter-dinamico-schematico}
 	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.45\textwidth}
+	\\[1em]
+	\begin{subfigure}[b]{\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{immagini/inverter/TEK00099.PNG}
+		\includegraphics[width=0.7\linewidth]{immagini/inverter/TEK00099.PNG}
 		\caption{Caratteristica dinamica dell'inverter.}
 		\label{subfig:inverter-dinamico-grafico}
 	\end{subfigure}
@@ -177,7 +177,7 @@ Inoltre è stato forzato uno stato logico 0 (oppure 1) all’ingresso dell’inv
 	\label{fig:inverter-dinamico}
 \end{figure}
 
-Successivamente, il circuito è stato modificato come in \autoref{fig:inverter-dinamico} per analizzarne la caratteristica dinamica. L’ingresso è stato collegato ad un generatore di forme d’onda impostato per fornire un segnale ad onda quadra con ampiezza $5\,\mathrm{V_{pp}}$ e offset $2.5\,\mathrm{V}$. All'oscilloscopio è possibile osservare l'uscita come la negazione del segnale in ingresso.
+Successivamente, il circuito è stato modificato come in \autoref{subfig:inverter-dinamico-schematico} per analizzarne la caratteristica dinamica. L’ingresso è stato collegato ad un generatore di forme d’onda impostato per fornire un segnale ad onda quadra con ampiezza $5\,\mathrm{V_{pp}}$ e offset $2.5\,\mathrm{V}$. All'oscilloscopio è possibile osservare l'uscita come la negazione del segnale in ingresso, \autoref{subfig:inverter-dinamico-grafico}.
 
 
 Sono stati poi calcolati il tempo di salita, il tempo di discesa e il ritardo di propagazione dell’inverter.
@@ -185,38 +185,65 @@ In \autoref{fig:ritardo_propagazione} è riportata la misura del ritardo di prop
 Le figure \ref{fig:salita} e \ref{fig:discesa} mostrano rispettivamente i fronti di salita e discesa del segnale in uscita, con tempi pari a circa \SI{30}{\nano\second} e \SI{20}{\nano\second}.
 
 
+% \begin{figure}[h]
+% 	\centering
+% 	\begin{subfigure}[b]{0.48\textwidth}
+% 		\centering
+% 		\includegraphics[width=.95\linewidth]{immagini/inverter/TEK00100.PNG}
+% 		\caption{Ritardo di propagazione (\SI{23.6}{\nano\second}).}
+% 		\label{fig:ritardo_propagazione}
+% 	\end{subfigure}
+% 	\hfill
+% 	\begin{subfigure}[b]{0.48\textwidth}
+% 		\centering
+% 		\includegraphics[width=.95\linewidth]{immagini/inverter/TEK00101.PNG}
+% 		\caption{Transizioni complete.}
+% 		\label{fig:transizioni_complete}
+% 	\end{subfigure}
+% 	\\[1em]
+% 	\begin{subfigure}[b]{0.48\textwidth}
+% 		\centering
+% 		\includegraphics[width=.95\linewidth]{immagini/inverter/TEK00102.PNG}
+% 		\caption{Tempo di salita (\SI{30}{\nano\second}).}
+% 		\label{fig:salita}
+% 	\end{subfigure}
+% 	\hfill
+% 	\begin{subfigure}[b]{0.48\textwidth}
+% 		\centering
+% 		\includegraphics[width=.95\linewidth]{immagini/inverter/TEK00103.PNG}
+% 		\caption{Tempo di discesa (\SI{20}{\nano\second}).}
+% 		\label{fig:discesa}
+% 	\end{subfigure}
+% 	\caption{Misure sperimentali della caratteristica dinamica dell'inverter CMOS.}
+% 	\label{fig:dinamica_misure}
+% \end{figure}
+
 \begin{figure}[h]
 	\centering
-	\begin{subfigure}[b]{0.48\textwidth}
+	\begin{subfigure}[b]{1\textwidth}
 		\centering
-		\includegraphics[width=.95\linewidth]{immagini/inverter/TEK00100.PNG}
+		\includegraphics[width=0.6\linewidth]{immagini/inverter/TEK00100.PNG}
 		\caption{Ritardo di propagazione (\SI{23.6}{\nano\second}).}
 		\label{fig:ritardo_propagazione}
 	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.48\textwidth}
-		\centering
-		\includegraphics[width=.95\linewidth]{immagini/inverter/TEK00101.PNG}
-		\caption{Transizioni complete.}
-		\label{fig:transizioni_complete}
-	\end{subfigure}
 	\\[1em]
-	\begin{subfigure}[b]{0.48\textwidth}
+	\begin{subfigure}[b]{1\textwidth}
 		\centering
-		\includegraphics[width=.95\linewidth]{immagini/inverter/TEK00102.PNG}
+		\includegraphics[width=0.6\linewidth]{immagini/inverter/TEK00102.PNG}
 		\caption{Tempo di salita (\SI{30}{\nano\second}).}
 		\label{fig:salita}
 	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.48\textwidth}
+	\\[1em]
+	\begin{subfigure}[b]{1\textwidth}
 		\centering
-		\includegraphics[width=.95\linewidth]{immagini/inverter/TEK00103.PNG}
+		\includegraphics[width=0.6\linewidth]{immagini/inverter/TEK00103.PNG}
 		\caption{Tempo di discesa (\SI{20}{\nano\second}).}
 		\label{fig:discesa}
 	\end{subfigure}
 	\caption{Misure sperimentali della caratteristica dinamica dell'inverter CMOS.}
 	\label{fig:dinamica_misure}
 \end{figure}
+
 
 \FloatBarrier
 
@@ -227,14 +254,14 @@ Il principio di funzionamento si basa sull’impiego di due inverter collegati i
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.32\linewidth]{immagini/latch/Latch.png}
+	\includegraphics[width=0.50\linewidth]{immagini/latch/Latch.png}
 	\caption{Schema circuitale del latch.}
 	\label{fig:latch_schema}
 \end{figure}
 
-Quando viene applicato un livello logico 1 all’ingresso del primo inverter, la sua uscita assume valore logico 0 che, a sua volta, viene invertito dal secondo stadio, restituendo un livello logico 1.
+Quando viene applicato un livello logico $1$ all’ingresso del primo inverter, la sua uscita assume valore logico $0$ che, a sua volta, viene invertito dal secondo stadio, restituendo un livello logico $1$.
 Tale valore viene mantenuto grazie all’anello di retroazione, che stabilizza il circuito in uno dei due stati possibili (0 o 1).
-Un comportamento duale si verifica quando viene applicato un livello logico 0.
+Un comportamento duale si verifica quando viene applicato un livello logico $0$.
 Per consentire la scrittura manuale di uno stato logico, il circuito è stato dotato di due pulsanti:
 uno collegato alla tensione di alimentazione $V_{DD}$ per impostare un livello logico alto, e uno collegato a massa per impostare un livello logico basso.
 L’uscita è stata collegata a un LED in modo da rendere visibile lo stato memorizzato. Come mostrato in \autoref{fig:latch_onoff}, quando l’uscita è alta il LED è acceso, mentre quando l'uscita è bassa il LED è spento.
@@ -257,12 +284,10 @@ L’uscita è stata collegata a un LED in modo da rendere visibile lo stato memo
 \end{figure}
 
 
-\FloatBarrier
-
 \section*{Ring Oscillator}
 Il Ring Oscillator, mostrato in \autoref{fig:ring-oscillator-schematico}, è un circuito che genera un segnale d'onda quadra con una frequenza determinata dal ritardo di propagazione degli inverter. Esso è costituito da un numero dispari di inverter collegati in cascata con l'uscita dell'ultimo riportata all'ingresso del primo. Ciò porta $V_{out}$ ad oscillare tra il livello logico alto e il livello logico basso.
 
-\begin{figure}[h]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=0.6\linewidth]{immagini/ring-oscillator/ring-oscillator-schematico.png}
 	\caption{Schematico ring oscillator.}
@@ -273,20 +298,20 @@ Questo circuito può generare segnali fino $6\,\mathrm{MHz}$. Tuttavia, a freque
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{immagini/ring-oscillator/3InverterNoRes.png}
+	\includegraphics[width=0.8\linewidth]{immagini/ring-oscillator/3InverterNoRes.png}
 	\caption{Schematico del ring oscillator con miglioramento del segnale d'uscita.}
 	\label{fig:ring-oscillator-schematico-miglirato}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\begin{subfigure}{0.45\linewidth}
+	\begin{subfigure}{0.48\linewidth}
 		\includegraphics[width = \linewidth]{immagini/ring-oscillator/ring-oscillator-oscillatore.png}
 		\caption{}
 		\label{fig:a-oscillatore-ring-oscillator}
 	\end{subfigure}
 	\quad
-	\begin{subfigure}{0.45\linewidth}
+	\begin{subfigure}{0.48\linewidth}
 		\includegraphics[width = \linewidth]{immagini/ring-oscillator/ring-oscillator-uscita-doppio-inverter-oscillatore.png}
 		\caption{}
 		\label{fig:b-oscillatore-ring-oscillator}
@@ -299,21 +324,21 @@ Per poter modificare la frequenza di oscillazione si può utilizzare il circuito
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{immagini/ring-oscillator/3InverteRes.png}
+	\includegraphics[width=0.8\linewidth]{immagini/ring-oscillator/3InverteRes.png}
 	\caption{Schematico del ring oscillator con modifica di frequenza.}
 	\label{fig:ring-oscillator-schematico-freq}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\linewidth]{immagini/ring-oscillator/TEK00108.PNG}
+	\includegraphics[width=0.8\linewidth]{immagini/ring-oscillator/TEK00108.PNG}
 	\caption{Misurazione frequenza tramite l'oscillatore.}
 	\label{fig:ring-oscillator-oscillare}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\linewidth]{immagini/ring-oscillator/plot-Freq-Res.png}
+	\includegraphics[width=0.7\linewidth]{immagini/ring-oscillator/plot-Freq-Res.png}
 	\caption{Variazione della frequenza al variare della resistenza $R_2$}
 	\label{fig:ring-oscillator-plot-freq-r}
 \end{figure}
@@ -327,37 +352,37 @@ L'obiettivo del divisore in frequenza è quello di ottenere, data una frequenza 
 \end{align*}
 con $n$ che può cambiare in base a quanti stadi di divisione si inseriscono.
 
-Uno stadio di divisione può essere realizzato tramite un Flip-Flop tipo D \autoref{fig:divisore-freq-fli-flop-d} la cui tabella di verità è riportata in \ref{tab:divisore-frequenza-flip-flop-d-tabella-verita}. La particolarità di questo circuito è che l'uscita Q (e quindi anche il suo negato $\overline{\mathrm{Q}}$) è sincronizzata sul fronte di salita di un segnale di \textit{clock}.  
+Uno stadio di divisione può essere realizzato tramite un Flip-Flop tipo D \autoref{fig:divisore-freq-fli-flop-d} la cui tabella di verità è riportata in \ref{tab:divisore-frequenza-flip-flop-d-tabella-verita}. La particolarità di questo circuito è che l'uscita Q (e quindi anche il suo negato $\overline{\mathrm{Q}}$) è sincronizzata sul fronte di salita di un segnale di \textit{clock}.
 
 \begin{figure}[h]
 	\begin{minipage}[b]{.45\linewidth}
 		\centering
 		\includegraphics[width=0.7\linewidth]{immagini/flip-flop-D/flip-flop-D.png}
-		\captionof{figure}{Flip-Flop tipo D}
+		\captionof{figure}{Flip-Flop tipo D.}
 		\label{fig:divisore-freq-fli-flop-d}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[b]{.45\linewidth}
 		\centering
 		\begin{tabular}{c|c c}
-			D & Q & $\overline{\mathrm{Q}}$ \\
+			D   & Q   & $\overline{\mathrm{Q}}$ \\
 			\midrule
-			0 & 0 & 1\\
-			1 & 1 & 0\\
+			$0$ & $0$ & $1$                     \\
+			$1$ & $1$ & $0$                     \\
 		\end{tabular}
 		\captionof{table}{Tabella verità flip-flop tipo D}
 		\label{tab:divisore-frequenza-flip-flop-d-tabella-verita}
 	\end{minipage}
 \end{figure}
 
-Il modello circuitale del divisore in frequenza a \autoref{fig:divisione-in-frequenza-schematico} è caratterizzato dal prelevare l'uscita negata $\overline{\mathrm{Q}}$ e portarla all'ingresso D. In aggiunta il segnale di \textit{clock} è portato al rispettivo pin. 
+Il modello circuitale del divisore in frequenza a \autoref{fig:divisione-in-frequenza-schematico} è caratterizzato dal prelevare l'uscita negata $\overline{\mathrm{Q}}$ e portarla all'ingresso D. In aggiunta il segnale di \textit{clock} è portato al rispettivo pin.
 
 \noindent Ipotizzando uno stato di partenza in cui $Q = 0$ e $D = \overline{Q} = 1$, questo fa si che:
 \begin{itemize}
 	\item Quando il \textit{clock} effettua un fronte di salita, l'uscita $Q$ si aggiorna al valore che assumeva $D$, ovvero livello logico alto. Si veda \autoref{fig:divisore-frequenza-esempio} al tempo $t =\,$\SI{0}{\milli\second};
 	\item Al successivo fronte di salita, dato che $D = \overline{Q} = 0$, si ottiene che $Q$ viene posta a zero mentre $D = \overline{Q} = 1$. Si veda \autoref{fig:divisore-frequenza-esempio} al tempo $t=\,$\SI{20}{\milli\second}.
 \end{itemize}
-Di conseguenza, per due periodi completi del clock in ingresso, l’uscita $Q$ completa un solo periodo, realizzando quindi una divisione della frequenza per 2. L’esempio temporale è riportato in \autoref{fig:divisore-frequenza-oscilloscopio}.
+Di conseguenza, per due periodi completi del clock in ingresso, l’uscita $Q$ completa un solo periodo, realizzando quindi una divisione della frequenza per un fattore $2$. L’esempio temporale è riportato in \autoref{fig:divisore-frequenza-oscilloscopio}.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.45\linewidth]{immagini/flip-flop-D/schematico-divisore-frequenza.png}
@@ -365,18 +390,19 @@ Di conseguenza, per due periodi completi del clock in ingresso, l’uscita $Q$ c
 	\label{fig:divisione-in-frequenza-schematico}
 \end{figure}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\linewidth]{immagini/flip-flop-D/oscillatore-divisiore-frequenza.PNG}
-	\caption{Misure del divisore in frequenza.}
-	\label{fig:divisore-frequenza-oscilloscopio}
-\end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\linewidth]{immagini/flip-flop-D/esempio-divisore-freq.png}
 	\caption{Esempio di divisore in frequenza.}
 	\label{fig:divisore-frequenza-esempio}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{immagini/flip-flop-D/oscillatore-divisiore-frequenza.PNG}
+	\caption{Misure del divisore in frequenza.}
+	\label{fig:divisore-frequenza-oscilloscopio}
 \end{figure}
 
 \end{document}

@@ -5,3 +5,14 @@
 {"rule":"ST_04_001","sentence":"^\\QQuando viene applicato un livello logico 1 all’ingresso del primo inverter, la sua uscita assume valore logico 0, che a sua volta viene invertito dal secondo stadio, restituendo un livello logico 1.\\E$"}
 {"rule":"ST_04_001","sentence":"^\\QL’uscita è stata collegata a un LED per rendere visibile lo stato memorizzato: come mostrato in \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, quando l’uscita è a livello logico 1 il LED risulta acceso, mentre con livello logico 0 rimane spento.\\E$"}
 {"rule":"MORFOLOGIK_RULE_IT_IT","sentence":"^\\QL'obiettivo del divisore in frequenza è quello di ottenere, data una frequenza di riferimento (come il segnale di clock), un altro segnale con\\E$"}
+{"rule":"ST_03_001","sentence":"^\\QL’ingresso è stato collegato ad un generatore di forme d’onda impostato per fornire un segnale ad onda quadra con ampiezza \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q e offset \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QIn \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q è riportata la misura del ritardo di propagazione, pari a circa 23.6 .\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QLe figure \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q e \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q mostrano rispettivamente i fronti di salita e discesa del segnale in uscita, con tempi pari a circa 30 e 20 .\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QRitardo di propagazione (23.6 ).\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QTempo di salita (30 ).\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QTempo di discesa (20 ).\\E$"}
+{"rule":"GR_04_002","sentence":"^\\QIl latch rappresenta una cella di memoria elementare, in grado di mantenere uno stato logico anche in assenza di segnale di ingresso.\\E$"}
+{"rule":"GR_04_002","sentence":"^\\QEsso è costituito da un numero dispari di inverter collegati in cascata con l'uscita dell'ultimo riportata all'ingresso del primo.\\E$"}
+{"rule":"ST_03_001","sentence":"^\\QCiò porta \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q ad oscillare tra il livello logico alto e il livello logico basso.\\E$"}
+{"rule":"WHITESPACE_PUNCTUATION","sentence":"^\\QSi veda \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q al tempo \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q 0 ; Al successivo fronte di salita, dato che \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, si ottiene che \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q viene posta a zero mentre \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QSi veda \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q al tempo \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q 20 .\\E$"}

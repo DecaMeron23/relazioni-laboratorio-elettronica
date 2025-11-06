@@ -5,3 +5,9 @@ latch
 Latch
 clock
 flip-flop
+discretizzato
+Morgan
+Karnaugh
+pin
+Package
+retroazionati
