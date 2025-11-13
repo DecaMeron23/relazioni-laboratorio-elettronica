@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1762439809.88884 "/home/emilio/Documenti/universita/laboratorio-elettronica/04-lab-23-ottobre/main.tex" "main.pdf" "main" 1762439817.70806 0
+["pdflatex"] 1763036136.08734 "/home/emilio/Documenti/universita/laboratorio-elettronica/04-lab-23-ottobre/main.tex" "main.pdf" "main" 1763036144.28363 0
   "/etc/texmf/web2c/texmf.cnf" 1759053305.78582 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1759408320.35651 31928 415c966344d43c11fa642fda80ca1297 ""
   "/home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk" 1759407540.43097 40112 28cd627938fdcd07ab142a558b665ac7 ""
@@ -8,7 +8,7 @@
   "/home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk" 1759408104.76927 28416 7fa48c1480c7bdcb7ab7cc75175bbcd3 ""
   "/home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk" 1760772355.51616 39096 3f4f05214b0fca044bc08b954883a89d ""
   "/home/emilio/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk" 1760787156.21655 14040 bde91d49418b4578419d00d473cba702 ""
-  "/home/emilio/Documenti/universita/laboratorio-elettronica/04-lab-23-ottobre/main.tex" 1762439801.68654 17707 b55b217ccabfb9c8aff39210ae938f75 ""
+  "/home/emilio/Documenti/universita/laboratorio-elettronica/04-lab-23-ottobre/main.tex" 1763036135.90969 17700 070b55c19cdd94d332e3954446bfe262 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1136768653 3584 13049b61b922a28b158a38aeff75ee9b ""
@@ -246,10 +246,10 @@
   "immagini/ring-oscillator/ring-oscillator-oscillatore.png" 1761236729.01177 31628 58ebf3ac8d17a1449f29bc78001b8c12 ""
   "immagini/ring-oscillator/ring-oscillator-schematico.png" 1761839405.18216 68346 60357cd170fd8ecd4c40e18dcf860a19 ""
   "immagini/ring-oscillator/ring-oscillator-uscita-doppio-inverter-oscillatore.png" 1761236729.02256 31022 ec8d6a226267d47471ab7b8b6bfcde71 ""
-  "main-frn.tex" 1762439817.48311 450 968cc1df2af3d8a37a4f11a0fed4da16 "pdflatex"
-  "main.aux" 1762439817.48012 7358 c0d50d60f663cd52f798e3443fd96dcc "pdflatex"
-  "main.out" 1762439811.16206 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1762439801.68654 17707 b55b217ccabfb9c8aff39210ae938f75 ""
+  "main-frn.tex" 1763036144.05545 450 968cc1df2af3d8a37a4f11a0fed4da16 "pdflatex"
+  "main.aux" 1763036144.0534 7358 c0d50d60f663cd52f798e3443fd96dcc "pdflatex"
+  "main.out" 1763036137.50742 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1763036135.90969 17700 070b55c19cdd94d332e3954446bfe262 ""
   (generated)
   "main-frn.tex"
   "main.aux"
