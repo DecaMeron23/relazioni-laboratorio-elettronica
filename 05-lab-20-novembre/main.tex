@@ -1,0 +1,146 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{graphicx}       %LaTeX package to import graphics
+
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+
+\usepackage{subcaption}
+
+\usepackage{hyphenat}
+\usepackage{array}
+\usepackage{booktabs}       % Per linee orizzontali migliori
+\usepackage{caption}        % Per personalizzare le didascalie<
+\usepackage{multirow}       % Per combinare celle nelle colonne
+\usepackage{hyperref}
+
+\usepackage{bm} 
+
+\usepackage{amsmath}        % Per migliorare l'aspetto delle formule
+
+\usepackage{todonotes}      % mettere le note dentro il documento
+
+\usepackage{siunitx}        % Per formattare le unità di misura
+\usepackage{gensymb}        % Simboli come °
+\usepackage{xfrac}          % per fare le frazioni inclinate
+
+\usepackage{pdfpages}
+
+\usepackage{import}
+\usepackage{frontespizio}
+
+\usepackage{placeins}       %per non far andare le immagini al di fuori delle sezioni utilizzare il comando: \FloatBarrier non far superare le immagini quel punto
+
+\usepackage{adjustbox}      % per dimensionare le immagini in modo automatico
+
+
+\addto\extrasitalian{\renewcommand{\figureautorefname}{figura}}
+\addto\extrasitalian{\renewcommand{\AMSautorefname}{equazione}}
+\addto\extrasitalian{\renewcommand{\tableautorefname}{tabella}}
+
+\begin{document}
+
+\includepdf{./frontespizio/frontespizio.pdf}
+
+\section*{Progettazione Circuito Digitale}
+
+Dato un numero $X$ compreso tra $0$ e $15$, l’obiettivo è realizzare un circuito digitale che dia in uscita $Q=1$ se $X \ge 10$. Osservando che per rappresentare tutti i numeri da $0$ a $15$ servono $4$ bit ($2^4=16$ combinazioni), l’idea è quella di utilizzare un componente \textit{dip switch} a $4$ interruttori. I $4$ bit in ingresso all’integrato 4093, composto da porte NAND, sono forniti dal \textit{dip switch} collegato come \autoref{fig:mappa-karnaugh}. Chiudendo l’interruttore il bit passa da 0 a 1 mentre aprendolo passa da 1 a 0. In uscita dall’integrato 4093 è poi collegata una resistenza di circa $2\, \mathrm{K} \ohm $ con in serie un LED per verificare il corretto funzionamento del circuito. Se $X \ge 10$, il LED si accende. Al contrario, se $X < 10$, il LED si spegne. E’ stata fornita una tensione in ingresso al circuito pari a $5\,\mathrm{V}$.
+
+\begin{align*}
+	b_2 \cdot b_3 + b_3 \cdot b_1 \qquad \Rightarrow \qquad \overline{\overline{b_2 \cdot b_3} \cdot \overline{b_3 \cdot b_1}}\\
+\end{align*}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{immagini/circuito-digitale/circuito.png}
+	\caption{Schematico circuito implementato.}
+	\label{fig:schematico-circuito}
+\end{figure}
+
+
+\begin{table}[h]
+	\centering
+	\setlength{\tabcolsep}{10pt}
+	\begin{tabular}{ c || c|c|c|c | c}
+		X  & $b_3$ & $b_2$ & $b_1$ & $b_0$ & \bf{Q} \\
+		\midrule
+		0  & 0     & 0     & 0     & 0     & 0 \\
+		1  & 0     & 0     & 0     & 1     & 0 \\
+		2  & 0     & 0     & 1     & 0     & 0 \\
+		3  & 0     & 0     & 1     & 1     & 0 \\
+		4  & 0     & 1     & 0     & 0     & 0 \\
+		5  & 0     & 1     & 0     & 1     & 0 \\
+		6  & 0     & 1     & 1     & 0     & 0 \\
+		7  & 0     & 1     & 1     & 1     & 0 \\
+		8  & 1     & 0     & 0     & 0     & 0 \\
+		9  & 1     & 0     & 0     & 1     & 0 \\
+		10 & 1     & 0     & 1     & 0     & 1 \\
+		11 & 1     & 0     & 1     & 1     & 1 \\
+		12 & 1     & 1     & 0     & 0     & 1 \\
+		13 & 1     & 1     & 0     & 1     & 1 \\
+		14 & 1     & 1     & 1     & 0     & 1 \\
+		15 & 1     & 1     & 1     & 1     & 1 \\
+	\end{tabular}
+	\caption{Tabella della verità.}
+	\label{tab:tabella-verita}
+\end{table}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.65\linewidth]{immagini/circuito-digitale/mappa_di_karnaugh.png}
+	\caption{Mappa di Karnaugh.}
+	\label{fig:mappa-karnaugh}
+\end{figure}
+
+
+\FloatBarrier
+
+\section{Timer 555}
+
+Ha diverse possibili configurazioni
+\begin{itemize}
+	\item Monostabile: in presenza di un impulso di trigger genera un impulso con caratteristiche definite.
+	\item Bistabile: viene utilizzato come flip-flop set-reset
+	\item Astabile: genera in modo autonomo una forma d’onda continua. 
+\end{itemize}
+
+Nel circuito la $V_{cc}$ viene ripartita equamente con 3 resistenze uguali. In questo modo compaiono 2 comparatori: uno a soglia $\sfrac{2}{3}$ (sopra) e uno a soglia $\sfrac{1}{3}$ (sotto).
+
+
+\subsection{Monostabile}
+Questo apparato viene utilizzato per effettuare switch debouncing. 
+Gli interruttori, generalmente, sono soggetti a un rimbalzo meccanico quando premuti e per tale motivo si hanno impulsi spuri. La configurazione monostabile genera un impulso fissato con R o C non interferito dal rimbalzo
+Per catturare l’immagine attraverso l’oscilloscopio di un impulso istantaneo si è utilizzata la modalità “single”, triggerando il segnale sul fronte di discesa ($\sfrac{V_{dd}}{2} \simeq 5\,\mathrm{V}$).
+Volendo la durata dell'impulso di circa 2 secondi abbiamo dimensionato il circuito con i valori riportati a \autoref{tab:valori-monostabile}.
+Inoltre abbiamo aggiunto un led finale per verificare il corretto funzionamento collegato al resto del circuito tramite una resistenza da $2.1\,\mathrm{K}\ohm$.
+
+
+\begin{align*}
+	t = 1.1 \cdot R_1 \cdot C_1
+\end{align*}
+
+\begin{table}[h]
+	\centering
+	\setlength{\tabcolsep}{20pt}
+	\begin{tabular}{c c}
+		\toprule
+		\textbf{Grandezza} & \textbf{Valore}         \\
+		\midrule
+		$C$                & $19.5\,\mu\mathrm{F}$   \\
+		$R_1$              & $101.5\,\mathrm{K}\ohm$ \\
+		$R_2$              & $11.8\,\mathrm{K}\ohm$  \\
+		\bottomrule
+	\end{tabular}
+	\caption{Valori utilizzati nel circuitio: Monostabile.}
+	\label{tab:valori-monostabile}
+\end{table}
+
+\subsection{Astabile}
+Il duty cycle é uguale a $\frac{T_1}{T}$ e quindi a $\frac{R_a+R_b}{R_a + 2 R_b}$. Dunque, la carica dipende da $R_a+R_b$ mentre la scarica dal solo $R_b$.
+Dimensionando circuito per un duty cycle a $1\,\mathrm{KHz}$, abbiamo scelto $R_a= 11.8\,\mathrm{K}\ohm$ , $R_b=4.7\,\mathrm{K}\ohm$ e $C = 70\,\mathrm{nF}$.
+Abbiamo dunque verificato se il periodo teorico uguale a ln 2(Ra+2Rb)C  è pari a quello reale.
+
+\begin{align*}
+	T = T_1 + T_2 = \ln 2 \cdot (R_A + 2 R_B) \cdot C
+\end{align*}
+
+\end{document}
