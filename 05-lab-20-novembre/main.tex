@@ -42,72 +42,95 @@
 \includepdf{./frontespizio/frontespizio.pdf}
 
 \section*{Progettazione Circuito Digitale}
-
-Dato un numero $X$ compreso tra $0$ e $15$, l’obiettivo è realizzare un circuito digitale che dia in uscita $Q=1$ se $X \ge 10$. Osservando che per rappresentare tutti i numeri da $0$ a $15$ servono $4$ bit ($2^4=16$ combinazioni), l’idea è quella di utilizzare un componente \textit{dip switch} a $4$ interruttori. I $4$ bit in ingresso all’integrato 4093, composto da porte NAND, sono forniti dal \textit{dip switch} collegato come \autoref{fig:mappa-karnaugh}. Chiudendo l’interruttore il bit passa da 0 a 1 mentre aprendolo passa da 1 a 0. In uscita dall’integrato 4093 è poi collegata una resistenza di circa $2\, \mathrm{K} \ohm $ con in serie un LED per verificare il corretto funzionamento del circuito. Se $X \ge 10$, il LED si accende. Al contrario, se $X < 10$, il LED si spegne. E’ stata fornita una tensione in ingresso al circuito pari a $5\,\mathrm{V}$.
-
+L’obiettivo è realizzare un circuito digitale che, dato in ingresso un numero $X$ compreso tra $0$ e $15$, dia in uscita $Q=1$ se $X \ge 10$. Per rappresentare tutti i numeri da $0$ a $15$ sono necessario $4$ bit ($2^4=16$ combinazioni) \autoref{subfig:tabella-verita}. Grazie alla mappa di Karnaugh, \autoref{fig:mappa-karnaugh}, è stato possibile ridurre il numero di porte necessarie. La formula ricavata è la seguente:
 \begin{align*}
-	b_2 \cdot b_3 + b_3 \cdot b_1 \qquad \Rightarrow \qquad \overline{\overline{b_2 \cdot b_3} \cdot \overline{b_3 \cdot b_1}}\\
+	b_2 \cdot b_3 + b_3 \cdot b_1 \qquad \Rightarrow \qquad \overline{\overline{b_2 \cdot b_3} \cdot \overline{b_3 \cdot b_1}} \\
 \end{align*}
+
+
+Tramite l'utilizzo del \textit{dip switch} a $4$ interruttori si possono comandare i diversi bit, in particolare chiudendo l’interruttore il bit passa da livello logico basso a livello logico alto, e viceversa.
+
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{immagini/circuito-digitale/circuito.png}
-	\caption{Schematico circuito implementato.}
+	\begin{subfigure}{0.49\linewidth}
+		\includegraphics[width = \linewidth]{immagini/circuito-digitale/tabella-verita.png}
+		\caption{Tabella della verità.}
+		\label{subfig:tabella-verita}
+	\end{subfigure}
+	\begin{subfigure}{0.49\linewidth}
+		\centering
+		\includegraphics[width = 0.8\linewidth]{immagini/circuito-digitale/mappa_di_karnaugh.jpg}
+		\caption{Mappa di Karnaugh.}
+		\label{fig:mappa-karnaugh}
+	\end{subfigure}
+	\caption{Tabella della verità e mappa di Karnaugh.}
+	\label{}
+\end{figure}
+
+Grazie all'integrato 4093, composto da 4 NAND, è stato possibile testare il funzionamento del circuito, il quale viene riportato a \autoref{fig:schematico-circuito}. In aggiunta, all'uscita dell'ultima porta NAND è stato aggiunto un LED, con in serie una resistenza di $2\, \mathrm{K} \ohm$ verso massa, così da vedere il LED acceso se $X \ge 10$.
+
+% I $4$ bit in ingresso all’integrato 4093, composto da porte NAND, sono forniti dal \textit{dip switch} collegato come \autoref{fig:mappa-karnaugh}. Chiudendo l’interruttore il bit passa da 0 a 1 mentre aprendolo passa da 1 a 0. In uscita dall’integrato 4093 è poi collegata una resistenza di circa $2\, \mathrm{K} \ohm $ con in serie un LED per verificare il corretto funzionamento del circuito. Se $X \ge 10$, il LED si accende. Al contrario, se $X < 10$, il LED si spegne. E’ stata fornita una tensione in ingresso al circuito pari a $5\,\mathrm{V}$.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{immagini/circuito-digitale/circuito.png}
+	\caption{Schematico del circuito logico implementato.}
 	\label{fig:schematico-circuito}
 \end{figure}
 
 
-\begin{table}[h]
-	\centering
-	\setlength{\tabcolsep}{10pt}
-	\begin{tabular}{ c || c|c|c|c | c}
-		X  & $b_3$ & $b_2$ & $b_1$ & $b_0$ & \bf{Q} \\
-		\midrule
-		0  & 0     & 0     & 0     & 0     & 0 \\
-		1  & 0     & 0     & 0     & 1     & 0 \\
-		2  & 0     & 0     & 1     & 0     & 0 \\
-		3  & 0     & 0     & 1     & 1     & 0 \\
-		4  & 0     & 1     & 0     & 0     & 0 \\
-		5  & 0     & 1     & 0     & 1     & 0 \\
-		6  & 0     & 1     & 1     & 0     & 0 \\
-		7  & 0     & 1     & 1     & 1     & 0 \\
-		8  & 1     & 0     & 0     & 0     & 0 \\
-		9  & 1     & 0     & 0     & 1     & 0 \\
-		10 & 1     & 0     & 1     & 0     & 1 \\
-		11 & 1     & 0     & 1     & 1     & 1 \\
-		12 & 1     & 1     & 0     & 0     & 1 \\
-		13 & 1     & 1     & 0     & 1     & 1 \\
-		14 & 1     & 1     & 1     & 0     & 1 \\
-		15 & 1     & 1     & 1     & 1     & 1 \\
-	\end{tabular}
-	\caption{Tabella della verità.}
-	\label{tab:tabella-verita}
-\end{table}
+% \begin{table}[h]
+% 	\centering
+% 	\setlength{\tabcolsep}{10pt}
+% 	\begin{tabular}{ c || c|c|c|c | c}
+% 		X  & $b_3$ & $b_2$ & $b_1$ & $b_0$ & \bf{Q} \\
+% 		\midrule
+% 		0  & 0     & 0     & 0     & 0     & 0 \\
+% 		1  & 0     & 0     & 0     & 1     & 0 \\
+% 		2  & 0     & 0     & 1     & 0     & 0 \\
+% 		3  & 0     & 0     & 1     & 1     & 0 \\
+% 		4  & 0     & 1     & 0     & 0     & 0 \\
+% 		5  & 0     & 1     & 0     & 1     & 0 \\
+% 		6  & 0     & 1     & 1     & 0     & 0 \\
+% 		7  & 0     & 1     & 1     & 1     & 0 \\
+% 		8  & 1     & 0     & 0     & 0     & 0 \\
+% 		9  & 1     & 0     & 0     & 1     & 0 \\
+% 		10 & 1     & 0     & 1     & 0     & 1 \\
+% 		11 & 1     & 0     & 1     & 1     & 1 \\
+% 		12 & 1     & 1     & 0     & 0     & 1 \\
+% 		13 & 1     & 1     & 0     & 1     & 1 \\
+% 		14 & 1     & 1     & 1     & 0     & 1 \\
+% 		15 & 1     & 1     & 1     & 1     & 1 \\
+% 	\end{tabular}
+% 	\caption{Tabella della verità.}
+% 	\label{tab:tabella-verita}
+% \end{table}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.65\linewidth]{immagini/circuito-digitale/mappa_di_karnaugh.png}
-	\caption{Mappa di Karnaugh.}
-	\label{fig:mappa-karnaugh}
-\end{figure}
+% \begin{figure}[h]
+% 	\centering
+% 	\includegraphics[width=0.65\linewidth]{immagini/circuito-digitale/mappa_di_karnaugh.png}
+% 	\caption{Mappa di Karnaugh.}
+% 	\label{fig:mappa-karnaugh}
+% \end{figure}
 
 
 \FloatBarrier
 
 \section{Timer 555}
 
-Ha diverse possibili configurazioni
+Ha diverse possibili configurazioni, tra cui:
 \begin{itemize}
 	\item Monostabile: in presenza di un impulso di trigger genera un impulso con caratteristiche definite.
 	\item Bistabile: viene utilizzato come flip-flop set-reset
-	\item Astabile: genera in modo autonomo una forma d’onda continua. 
+	\item Astabile: genera in modo autonomo una forma d’onda continua.
 \end{itemize}
 
 Nel circuito la $V_{cc}$ viene ripartita equamente con 3 resistenze uguali. In questo modo compaiono 2 comparatori: uno a soglia $\sfrac{2}{3}$ (sopra) e uno a soglia $\sfrac{1}{3}$ (sotto).
 
 
 \subsection{Monostabile}
-Questo apparato viene utilizzato per effettuare switch debouncing. 
+Questo apparato viene utilizzato per effettuare switch debouncing.
 Gli interruttori, generalmente, sono soggetti a un rimbalzo meccanico quando premuti e per tale motivo si hanno impulsi spuri. La configurazione monostabile genera un impulso fissato con R o C non interferito dal rimbalzo
 Per catturare l’immagine attraverso l’oscilloscopio di un impulso istantaneo si è utilizzata la modalità “single”, triggerando il segnale sul fronte di discesa ($\sfrac{V_{dd}}{2} \simeq 5\,\mathrm{V}$).
 Volendo la durata dell'impulso di circa 2 secondi abbiamo dimensionato il circuito con i valori riportati a \autoref{tab:valori-monostabile}.
