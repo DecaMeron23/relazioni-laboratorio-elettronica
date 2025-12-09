@@ -43,11 +43,11 @@
 
 \section{Progettazione Circuito Digitale}
 
-L’obiettivo è stato quello di realizzare un circuito digitale in grado di fornire in uscita $Q = 1$, dato un numero compreso tra $0$ e $15$, se e solo se risultasse maggiore o uguale a $10$. 
+L’obiettivo è stato quello di realizzare un circuito digitale in grado di fornire in uscita $Q = 1$, dato un numero compreso tra $0$ e $15$, se e solo se risultasse maggiore o uguale a $10$.
 
-A \autoref{subfig:tabella-verita} viene riportata la tabella di verità del circuito logico da sviluppare. Grazie alle mappe di Karnaugh, \autoref{subfig:mappa-karnaugh}, e al teorema di De Morgan si è ricavata la seguente formula:  
+A \autoref{subfig:tabella-verita} viene riportata la tabella di verità del circuito logico da sviluppare. Grazie alle mappe di Karnaugh, \autoref{subfig:mappa-karnaugh}, e al teorema di De Morgan si è ricavata la seguente formula:
 \begin{align*}
-	b_2 \cdot b_3 + b_3 \cdot b_1 \qquad \Rightarrow \qquad \overline{\overline{b_2 \cdot b_3} \cdot \overline{b_3 \cdot b_1}}\\
+	b_2 \cdot b_3 + b_3 \cdot b_1 \qquad \Rightarrow \qquad \overline{\overline{b_2 \cdot b_3} \cdot \overline{b_3 \cdot b_1}} \\
 \end{align*}
 Questo ha permesso di utilizzare un singolo integrato, il 4093, composto da $4$ porte NAND per costruire il circuito.
 
@@ -86,11 +86,11 @@ I $4$ bit sono stati forniti in ingresso all’integrato 4093 secondo lo schema 
 
 \section{Timer 555}
 
-Il timer 555 è un circuito integrato molto diffuso grazie alla sua versatilità, \autoref{fig:circuito-timer-555}. Esso è composto da: 
+Il timer 555 è un circuito integrato molto diffuso grazie alla sua versatilità, \autoref{fig:circuito-timer-555}. Esso è composto da:
 
 \begin{itemize}
 	\item Partitore resistivo con tre resistenze da $5\,\mathrm{K}\Omega$, le quali creano due soglie di riferimento: \textit{trigger} con valore $\frac{1}{3} V_{cc}$ e \textit{threshold} da $\frac{2}{3} V_{cc}$;
-	\item \textit{Transistor} di scarica assimilabile a un interruttore. 
+	\item \textit{Transistor} di scarica assimilabile a un interruttore.
 	\item \textit{Latch set-reset} con il quale si controlla il \textit{transistor} di scarica e l'uscita $V_{out}$.
 	\item Due diversi comparatori con l'obiettivo di effettuare il \texttt{set} oppure il \texttt{reset} del \textit{latch set-reset};
 \end{itemize}
@@ -115,7 +115,7 @@ A seguire vengono presentate le configurazioni più comuni.
 
 
 \subsection{Monostabile}
-La configurazione monostabile, presentata a \autoref{fig:circuito-monostabile}, è spesso utilizzata per effettuare lo \textit{switch debouncing}. 
+La configurazione monostabile, presentata a \autoref{fig:circuito-monostabile}, è spesso utilizzata per effettuare lo \textit{switch debouncing}.
 
 Gli interruttori, generalmente, sono soggetti a un rimbalzo meccanico quando premuti e, per tale motivo, si possono verificare degli impulsi spuri. La configurazione monostabile permette di eliminare quest'ultimi generando un impulso di durata fissa, proporzionale a $R_1$ e $C_1$:
 \begin{align*}
@@ -152,13 +152,13 @@ Inoltre è stato aggiunto un LED finale, collegato al resto del circuito tramite
 
 Il funzionamento del circuito è il seguente:
 \begin{enumerate}
-	\item A inizio si ha che: il \textit{trigger} è mantenuto a $V_{cc}$, $V_{out}$ è pari a \texttt{LOW}, di conseguenza la capacità $C_1$ è scarica.
+	\item A inizio si ha che: il \textit{trigger} è mantenuto a $V_{cc}$, $V_{out}$ è pari a \texttt{low}, di conseguenza la capacità $C_1$ è scarica.
 	\item Quando il \textit{trigger} viene posto a una tensione inferiore di $V_{cc}/3$, grazie alla pressione di del pulsante, si effettua il \texttt{set} nel \textit{latch set-reset}. Con l'effetto di:
-	\begin{itemize}
-		\item Porre l'uscita $V_{out} = $ \texttt{HIGH};
-		\item Spegnere il transistor del \textit{discharge} facendo si che la capacità possa caricarsi. 
-	\end{itemize} 	
-	\item  La capacità si continua a caricare finché non supera la tensione di $\frac{2}{3} V_{cc}$, attivando il \texttt{reset} del \textit{latch set-reset}. Ponendo nuovamente l'uscita \texttt{HIGH} e scaricando la capacità.
+	      \begin{itemize}
+		      \item Porre l'uscita $V_{out} = $ \texttt{high};
+		      \item Spegnere il transistor del \textit{discharge} facendo si che la capacità possa caricarsi.
+	      \end{itemize}
+	\item  La capacità si continua a caricare finché non supera la tensione di $\frac{2}{3} V_{cc}$, attivando il \texttt{reset} del \textit{latch set-reset}. Ponendo nuovamente l'uscita \texttt{high} e scaricando la capacità.
 \end{enumerate}
 
 
@@ -174,14 +174,41 @@ Per acquisire correttamente l'impulso è stata utilizzata la modalità \textit{s
 
 
 \subsection{Astabile}
-In questa configurazione il periodo e il duty cycle dipendono dal circuito RC esterno.
-Nel nostro caso quest'ultimo è uguale a $\frac{T_1}{T}$ cioè pari a $\frac{R_A+R_B}{R_A + 2 R_B}$. 
-Di conseguenza la carica del condensatore dipende da $R_A+R_B$ mentre la scarica dal solo $R_B$.
-Dimensionando il circuito per ottenere una frequenza di $1\,\mathrm{kHz}$, sono stati scelti $R_A= 11.8\,\mathrm{k}\ohm$, $R_B=4.7\,\mathrm{k}\ohm$ e $C = 70\,\mathrm{nF}$.
-È stato poi verificato che il periodo teorico,
-\[
-T = T_1 + T_2 = \ln 2 \cdot (R_A + 2 R_B) C,
-\]
-coincidesse con quello misurato.
+
+La configurazione di astabile permette di generare un segnale a onda quadra periodica, schematico a \autoref{fig:circuito-timer555-astabile}.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.55\linewidth]{immagini/astabile/circutito-monostabile.png}
+	\caption{Configurazione astabile del timer 555.}
+	\label{fig:circuito-timer555-astabile}
+\end{figure}
+Il principio di funzionamento del circuito si basa sulla carica e scarica di una capacità, in particolare si susseguono i diversi eventi:
+\begin{itemize}
+	\item Ipotizzando uno stato iniziale in cui l'uscita $V_{out}$ è \texttt{high}, allora la capacità C tende a caricarsi a $V_{cc}$ attraverso le due resistenze $R_A$ e $R_B$.
+	\item Quando la caduta di tensione su C raggiunge $\frac{2}{3}V_{cc}$ si effettua il \texttt{reset} del \textit{latch} portando l'uscita a \texttt{low};
+	\item Con l'uscita a \texttt{low} si ha che il \textit{transistor} di scarica è attivo, creando un percorso verso massa attraverso la resistenza $R_B$ di scarica per la capacità C;
+	\item Quando la tensione ai capi della capacità si riduce scendendo sotto i $V_{cc}/3$ si effettua il \texttt{set} portando l'uscita a \texttt{high} e spegnendo il \textit{transistor} di scarica;
+	\item A questo punto ricomincia il ciclo di carica di C.
+\end{itemize}
+
+Si può notare che la carica del condensatore dipende da $R_A+R_B$ mentre la scarica dal solo $R_B$. Questo determina un \textit{duty cylce} diverso da $50\%$. In particolare si ricava che:
+\begin{align*}
+	T_{up}   & = \ln2 \cdot (R_A + R_B)C \\
+	T_{down} & =  \ln2 \cdot  R_B C
+\end{align*}
+Portando ad avere un periodo, e un \textit{duty cycle} pari a:
+\begin{align*}
+	T = \ln2 \cdot (R_A +2 R_B)C \qquad \qquad \delta = \frac{R_A + R_B}{ R_A+2R_B}
+\end{align*}
+
+Il dimensionamento del circuito è stato effettuato in modo tale da ottenere una frequenza di $1\,\mathrm{kHz}$ per questo si è scelto: $R_A$ pari a $11.8\,\mathrm{k}\ohm$, $R_B=4.7\,\mathrm{k}\ohm$ e la capacità pari a $70\,\mathrm{nF}$.
+In seguito si è verificato, tramite l'oscilloscopio, se il periodo e il \textit{duty cycle} coincidessero con quello teorico, \autoref{fig:astabile-oscilloscopio}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{immagini/astabile/astabile-periodo.PNG}
+	\caption{Segnale generato dal circuito astabile, con periodo pari a circa $1\,\mathrm{ms} \Rightarrow 1\,\mathrm{KHz}$ e un \textit{duty cycle} di circa $\delta = \frac{800\,\mu\mathrm{s}}{1\,\mathrm{ms}} = 80\% \simeq \frac{R_A + R_B}{ R_A+2R_B} \simeq 78\%$}
+	\label{fig:astabile-oscilloscopio}
+\end{figure}
 
 \end{document}
