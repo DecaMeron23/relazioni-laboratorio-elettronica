@@ -89,6 +89,13 @@ Internamente è composto da:
 	\item un MOSFET di scarica assimilabile a un interruttore. 
 \end{itemize}
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{immagini/timer555/timer555.png}
+	\caption{Circuito del Timer 555.}
+	\label{fig:circuito-timer-555}
+\end{figure}
+
 Questi blocchi permettono di realizzare diverse configurazioni operative:
 \begin{itemize}
 	\item Monostabile: genera un impulso di durata predefinita in presenza di un impulso di trigger.
@@ -101,16 +108,23 @@ Questi blocchi permettono di realizzare diverse configurazioni operative:
 
 
 \subsection{Monostabile}
-Questa configurazione viene utilizzata per effettuare switch debouncing. 
-Gli interruttori, generalmente, sono soggetti a un rimbalzo meccanico quando premuti e, per tale motivo, si hanno impulsi spuri. La configurazione monostabile genera un impulso di durata fissata da R e C, non influenzato dal rimbalzo.
-Per acquisire correttamente l'impulso è stata utilizzata la modalità “single” dell’oscilloscopio, impostando il trigger a $\mathrm{V_{DD}/2} = 5\,\mathrm{V}$ sul fronte di discesa del segnale.
-Per ottenere una durata dell’impulso di circa 2 secondi, il circuito è stato dimensionato con i valori riportati a \autoref{tab:valori-monostabile}.
-Inoltre è stato aggiunto un LED finale, collegato al resto del circuito tramite una resistenza da $2.1\,\mathrm{k}\ohm$, per verificare il corretto funzionamento della presente configurazione.
+La configurazione monostabile, presentata a \autoref{fig:circuito-monostabile}, è spesso utilizzata per effettuare lo \textit{switch debouncing}. 
 
-
+Gli interruttori, generalmente, sono soggetti a un rimbalzo meccanico quando premuti e, per tale motivo, si possono verificare degli impulsi spuri. La configurazione monostabile permette di eliminare quest'ultimi generando un impulso di durata fissa, proporzionale a $R_1$ e $C_1$:
 \begin{align*}
 	t = 1.1 \cdot R_1 \cdot C_1
 \end{align*}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{immagini/monostabile-555/circuito-monostabile.png}
+	\caption{Schematico del circuito monostabile.}
+	\label{fig:circuito-monostabile}
+\end{figure}
+
+Per ottenere una durata dell’impulso di circa 2 secondi, il circuito è stato dimensionato con i valori riportati a \autoref{tab:valori-monostabile}.
+Inoltre è stato aggiunto un LED finale, collegato al resto del circuito tramite una resistenza da $2.1\,\mathrm{k}\ohm$, per verificare il corretto funzionamento.
+
 
 \begin{table}[h]
 	\centering
@@ -124,9 +138,33 @@ Inoltre è stato aggiunto un LED finale, collegato al resto del circuito tramite
 		$R_2$              & $11.8\,\mathrm{k}\ohm$  \\
 		\bottomrule
 	\end{tabular}
-	\caption{Valori utilizzati nel circuito: Monostabile.}
+	\caption{Valori utilizzati nel circuito monostabile.}
 	\label{tab:valori-monostabile}
 \end{table}
+
+
+Il funzionamento del circuito è il seguente:
+\begin{enumerate}
+	\item A inizio si ha che: il \textit{trigger} è mantenuto a $V_{cc}$, $V_{out}$ è pari a \texttt{LOW}, di conseguenza la capacità $C_1$ è scarica.
+	\item Quando il \textit{trigger} viene posto a una tensione inferiore di $V_{cc}/3$, grazie alla pressione di del pulsante, si effettua il \texttt{set} nel \textit{flip-flop D}. Con l'effetto di:
+	\begin{itemize}
+		\item Porre l'uscita $V_{out} = $ \texttt{HIGH};
+		\item Spegnere il transistor del \textit{discharge} facendo si che la capacità possa caricarsi. 
+	\end{itemize} 	
+	\item  La capacità si continua a caricare finché non supera la tensione di $\frac{2}{3} V_{cc}$, attivando il \texttt{reset} del \textit{flip-flop D}. Ponendo nuovamente l'uscita \texttt{HIGH} e scaricando la capacità.
+\end{enumerate}
+
+
+Per acquisire correttamente l'impulso è stata utilizzata la modalità \textit{single} dell’oscilloscopio, impostando il \textit{trigger} a $\mathrm{V_{DD}/2} = 5\,\mathrm{V}$ sul fronte di discesa del segnale, a \autoref{fig:monostabile-oscilloscopio}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{immagini/monostabile-555/monostabile-instabile.PNG}
+	\caption{In giallo la serie di impulsi spuri dovuti al \textit{switch debouncing}, mentre in azzurro il segnale generato dal monostabile.}
+	\label{fig:monostabile-oscilloscopio}
+\end{figure}
+
+
 
 \subsection{Astabile}
 In questa configurazione il periodo e il duty cycle dipendono dal circuito RC esterno.
