@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.18)  2 DEC 2025 16:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.18)  9 DEC 2025 19:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/emilio/Documenti/universita/laboratorio-elettronica/05-lab-20-novembre/main.tex
-(/home/emilio/Documenti/universita/laboratorio-elettronica/05-lab-20-novembre/main.tex
+**/home/emilio/Documenti/universita/relazioni-laboratorio-elettronica/05-lab-20-novembre/main.tex
+(/home/emilio/Documenti/universita/relazioni-laboratorio-elettronica/05-lab-20-novembre/main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -668,7 +668,23 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \sift@deathcycles=\count345
 \@vwid@loff=\dimen317
 \@vwid@roff=\dimen318
-)) (./main.aux)
+)) (./main.aux
+
+LaTeX Warning: Label `subfig:tabella-verita' multiply defined.
+
+
+LaTeX Warning: Label `sub@subfig:tabella-verita' multiply defined.
+
+
+LaTeX Warning: Label `fig:mappa-karnaugh' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:mappa-karnaugh' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
@@ -777,85 +793,70 @@ Package pdftex.def Info: ./frontespizio/frontespizio.pdf , page1 used on input l
 
 
  <./frontespizio/frontespizio.pdf{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}>]
-<immagini/circuito-digitale/tabella-verita.png, id=59, 392.46625pt x 520.94624pt>
+<immagini/circuito-digitale/tabella-verita.png, id=58, 392.46625pt x 520.94624pt>
 File: immagini/circuito-digitale/tabella-verita.png Graphic file (type png)
 <use immagini/circuito-digitale/tabella-verita.png>
-Package pdftex.def Info: immagini/circuito-digitale/tabella-verita.png  used on input line 57.
+Package pdftex.def Info: immagini/circuito-digitale/tabella-verita.png  used on input line 58.
 (pdftex.def)             Requested size: 191.10214pt x 253.66815pt.
-<immagini/circuito-digitale/mappa_di_karnaugh.jpg, id=61, 159.25943pt x 283.04744pt>
+<immagini/circuito-digitale/mappa_di_karnaugh.jpg, id=60, 159.25943pt x 283.04744pt>
 File: immagini/circuito-digitale/mappa_di_karnaugh.jpg Graphic file (type jpg)
 <use immagini/circuito-digitale/mappa_di_karnaugh.jpg>
-Package pdftex.def Info: immagini/circuito-digitale/mappa_di_karnaugh.jpg  used on input line 63.
+Package pdftex.def Info: immagini/circuito-digitale/mappa_di_karnaugh.jpg  used on input line 64.
 (pdftex.def)             Requested size: 152.8823pt x 271.72676pt.
-<immagini/circuito-digitale/circuito.png, id=63, 281.853pt x 184.2885pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<immagini/circuito-digitale/circuito.png, id=62, 281.853pt x 184.2885pt>
 File: immagini/circuito-digitale/circuito.png Graphic file (type png)
 <use immagini/circuito-digitale/circuito.png>
-Package pdftex.def Info: immagini/circuito-digitale/circuito.png  used on input line 77.
+Package pdftex.def Info: immagini/circuito-digitale/circuito.png  used on input line 78.
 (pdftex.def)             Requested size: 234.00238pt x 153.0044pt.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: immagini/circuito-digitale/tabella-verita.png Graphic file (type png)
+<use immagini/circuito-digitale/tabella-verita.png>
+Package pdftex.def Info: immagini/circuito-digitale/tabella-verita.png  used on input line 87.
+(pdftex.def)             Requested size: 191.10214pt x 253.66815pt.
+File: immagini/circuito-digitale/mappa_di_karnaugh.jpg Graphic file (type jpg)
+<use immagini/circuito-digitale/mappa_di_karnaugh.jpg>
+Package pdftex.def Info: immagini/circuito-digitale/mappa_di_karnaugh.jpg  used on input line 93.
+(pdftex.def)             Requested size: 152.8823pt x 271.72676pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[2{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./immagini/circuito-digitale/tabella-verita.png> <./immagini/circuito-digitale/mappa_di_karnaugh.jpg>]
-LaTeX Font Info:    Calculating math sizes for size <8.4> on input line 129.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.2> not available
-(Font)              size <5> substituted on input line 129.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.2> not available
-(Font)              size <5> substituted on input line 129.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.2> not available
-(Font)              size <5> substituted on input line 129.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <4.2> not available
-(Font)              size <5> substituted on input line 129.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <4.2> not available
-(Font)              size <5> substituted on input line 129.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <4.2> not available
-(Font)              size <5> substituted on input line 129.
-
-
-LaTeX Font Warning: Font shape `TS1/cmr/m/n' in size <4.2> not available
-(Font)              size <5> substituted on input line 129.
-
+[2{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [3 <./immagini/circuito-digitale/tabella-verita.png> <./immagini/circuito-digitale/mappa_di_karnaugh.jpg> <./immagini/circuito-digitale/circuito.png>] [4]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3 <./immagini/circuito-digitale/circuito.png>] [4] (./main.aux)
+[5
+
+] [6] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 
 
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 2.90001pt have occurred.
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 247E9D196148923883DA6F36FF07BB36;300.
  ) 
 Here is how much of TeX's memory you used:
- 29311 strings out of 476098
- 592175 string characters out of 5793536
+ 29231 strings out of 476098
+ 590948 string characters out of 5793536
  1933975 words of memory out of 5000000
- 50813 multiletter control sequences out of 15000+600000
- 576710 words of font info for 83 fonts, out of 8000000 for 9000
+ 50737 multiletter control sequences out of 15000+600000
+ 571343 words of font info for 68 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 99i,17n,101p,651b,1073s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,17n,101p,1021b,1073s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (4 pages, 526287 bytes).
+Output written on main.pdf (6 pages, 528679 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
- 12 named destinations out of 1000 (max. 500000)
+ 174 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
+ 15 named destinations out of 1000 (max. 500000)
  72 words of extra memory for PDF output out of 10000 (max. 10000000)
 
