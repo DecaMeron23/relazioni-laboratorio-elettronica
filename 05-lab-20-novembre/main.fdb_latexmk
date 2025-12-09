@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1765313303.69134 "/home/emilio/Documenti/universita/relazioni-laboratorio-elettronica/05-lab-20-novembre/main.tex" "main.pdf" "main" 1765313304.8098 0
+["pdflatex"] 1765316332.52192 "/home/emilio/Documenti/universita/relazioni-laboratorio-elettronica/05-lab-20-novembre/main.tex" "main.pdf" "main" 1765316333.62851 0
   "/etc/texmf/web2c/texmf.cnf" 1759053305.78582 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/emilio/Documenti/universita/relazioni-laboratorio-elettronica/05-lab-20-novembre/main.tex" 1765313303.52162 8188 70b266ce5f53655ecae447915db370cf ""
+  "/home/emilio/Documenti/universita/relazioni-laboratorio-elettronica/05-lab-20-novembre/main.tex" 1765316331.21447 8722 2eb545ad7cf87cfea06a9255fd3e3a66 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1136768653 3584 13049b61b922a28b158a38aeff75ee9b ""
@@ -230,10 +230,10 @@
   "immagini/monostabile-555/circuito-monostabile.png" 1765313127.11593 103718 261f589c899ad746ef269ea129ef34e8 ""
   "immagini/monostabile-555/monostabile-instabile.PNG" 1765306306.79493 16997 0794b69956fdeac3c012bd6ff713d73b ""
   "immagini/timer555/timer555.png" 1765309676.63908 29934 f63632bde460653b25180eca8d0a9c1b ""
-  "main-frn.tex" 1765313304.72358 450 968cc1df2af3d8a37a4f11a0fed4da16 "pdflatex"
-  "main.aux" 1765313304.72158 2726 d070a0c4501a68e5a1083ffc0738681f "pdflatex"
-  "main.out" 1765313304.72258 300 247e9d196148923883da6f36ff07bb36 "pdflatex"
-  "main.tex" 1765313303.52162 8188 70b266ce5f53655ecae447915db370cf ""
+  "main-frn.tex" 1765316333.54675 450 968cc1df2af3d8a37a4f11a0fed4da16 "pdflatex"
+  "main.aux" 1765316333.5454 2860 26a5ea9a4088f7595805676e6261d40f "pdflatex"
+  "main.out" 1765316333.5454 504 4a52397c387fc84901d0c851224647f6 "pdflatex"
+  "main.tex" 1765316331.21447 8722 2eb545ad7cf87cfea06a9255fd3e3a66 ""
   (generated)
   "main-frn.tex"
   "main.aux"

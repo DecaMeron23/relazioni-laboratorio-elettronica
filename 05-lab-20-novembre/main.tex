@@ -41,67 +41,74 @@
 
 \includepdf{./frontespizio/frontespizio.pdf}
 
-\section*{Progettazione Circuito Digitale}
+\section{Progettazione Circuito Digitale}
 
-Dato un numero $X$ compreso tra $0$ e $15$, rappresentabile tramite $4$ bit, l’obiettivo è stato quello di realizzare un circuito digitale in grado di fornire in uscita $Q = 1$ se e solo se $X \geq 10$. Poiché sono necessarie $16$ combinazioni ($2^4$), l’idea è stata quella di utilizzare un componente \textit{dip switch} a $4$ interruttori. I $4$ bit in ingresso all’integrato 4093, composto da 4 porte NAND, sono forniti dal \textit{dip switch} stesso collegato come \autoref{fig:mappa-karnaugh}. Chiudendo l’interruttore, il bit passa da 0 a 1 mentre aprendolo passa da 1 a 0. In uscita all’integrato 4093 è stata collegata una resistenza di circa $2\, \mathrm{k} \ohm $ con in serie un LED per verificare il corretto funzionamento del circuito: il LED si accende quando $X \geq 10$ e rimane spento quando $X < 10$. La tensione di alimentazione del circuito è pari a $5\,\mathrm{V}$.
+L’obiettivo è stato quello di realizzare un circuito digitale in grado di fornire in uscita $Q = 1$, dato un numero compreso tra $0$ e $15$, se e solo se risultasse maggiore o uguale a $10$. 
 
+A \autoref{subfig:tabella-verita} viene riportata la tabella di verità del circuito logico da sviluppare. Grazie alle mappe di Karnaugh, \autoref{subfig:mappa-karnaugh}, e al teorema di De Morgan si è ricavata la seguente formula:  
 \begin{align*}
 	b_2 \cdot b_3 + b_3 \cdot b_1 \qquad \Rightarrow \qquad \overline{\overline{b_2 \cdot b_3} \cdot \overline{b_3 \cdot b_1}}\\
 \end{align*}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\linewidth]{immagini/circuito-digitale/circuito.png}
-	\caption{Schematico circuito implementato.}
-	\label{fig:schematico-circuito}
-\end{figure}
-
+Questo ha permesso di utilizzare un singolo integrato, il 4093, composto da $4$ porte NAND per costruire il circuito.
 
 \begin{figure}[h]
 	\centering
 	\begin{subfigure}{0.49\linewidth}
-		\includegraphics[width = \linewidth]{immagini/circuito-digitale/tabella-verita.png}
+		\includegraphics[width = 0.8\linewidth]{immagini/circuito-digitale/tabella-verita.png}
 		\caption{Tabella della verità.}
 		\label{subfig:tabella-verita}
 	\end{subfigure}
 	\begin{subfigure}{0.49\linewidth}
 		\centering
-		\includegraphics[width = 0.8\linewidth]{immagini/circuito-digitale/mappa_di_karnaugh.jpg}
+		\includegraphics[width = 0.6\linewidth]{immagini/circuito-digitale/mappa_di_karnaugh.jpg}
 		\caption{Mappa di Karnaugh.}
-		\label{fig:mappa-karnaugh}
+		\label{subfig:mappa-karnaugh}
 	\end{subfigure}
 	\caption{Tabella della verità e mappa di Karnaugh.}
 	\label{}
 \end{figure}
 
 
-\FloatBarrier
+Per rappresentare le $2^4 = 16$ diverse combinazioni è stato utilizzato il componente \textit{dip switch} a $4$ interruttori, ad essi si sono collegati dei resistori di \textit{pull-down} cosi che: chiudendo un interruttore il bit passa da 0 a 1 mentre aprendolo passa da 1 a 0.
+
+I $4$ bit sono stati forniti in ingresso all’integrato 4093 secondo lo schema riportato a \autoref{fig:schematico-circuito}.  In aggiunta, all'uscita dell’integrato è stata collegata una resistenza da $2\, \mathrm{k} \Omega $ con in serie un LED per verificarne il corretto funzionamento del circuito: il LED si accende quando $X \geq 10$ e rimane spento quando $X < 10$. La tensione di alimentazione utilizzata in questo circuito è stata di $5\,\mathrm{V}$.
+
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{immagini/circuito-digitale/circuito.png}
+	\caption{Schematico circuito implementato.}
+	\label{fig:schematico-circuito}
+\end{figure}
+
+
 
 \section{Timer 555}
 
-Il timer 555 è un circuito integrato molto diffuso grazie alla sua versatilità. 
-Internamente è composto da:
+Il timer 555 è un circuito integrato molto diffuso grazie alla sua versatilità, \autoref{fig:circuito-timer-555}. Esso è composto da: 
 
 \begin{itemize}
-	\item un partitore resistivo che crea due soglie di riferimento, una a $\dfrac{1}{3} V_{cc}$  e l'altra a $\dfrac{2}{3} V_{cc}$;
-	\item due comparatori che confrontano la tensione sul condensatore con queste due soglie;
-	\item un latch set-reset che determina lo stato in uscita seguito poi da una porta NOT che determina l'uscita vera e propria;
-	\item un MOSFET di scarica assimilabile a un interruttore. 
+	\item Partitore resistivo con tre resistenze da $5\,\mathrm{K}\Omega$, le quali creano due soglie di riferimento: \textit{trigger} con valore $\frac{1}{3} V_{cc}$ e \textit{threshold} da $\frac{2}{3} V_{cc}$;
+	\item \textit{Transistor} di scarica assimilabile a un interruttore. 
+	\item \textit{Latch set-reset} con il quale si controlla il \textit{transistor} di scarica e l'uscita $V_{out}$.
+	\item Due diversi comparatori con l'obiettivo di effettuare il \texttt{set} oppure il \texttt{reset} del \textit{latch set-reset};
 \end{itemize}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{immagini/timer555/timer555.png}
+	\includegraphics[width=0.6\linewidth]{immagini/timer555/timer555.png}
 	\caption{Circuito del Timer 555.}
 	\label{fig:circuito-timer-555}
 \end{figure}
 
-Questi blocchi permettono di realizzare diverse configurazioni operative:
-\begin{itemize}
-	\item Monostabile: genera un impulso di durata predefinita in presenza di un impulso di trigger.
-	\item Bistabile: viene utilizzato come flip-flop set-reset mantenendo il segnale di uscita finché non arriva un segnale di set/reset.
-	\item Astabile: produce una forma d'onda periodica senza bisogno di segnali esterni. 
-\end{itemize}
+A seguire vengono presentate le configurazioni più comuni.
+
+% \begin{itemize}
+% 	\item Monostabile: genera un impulso di durata predefinita in presenza di un impulso di trigger.
+% 	\item Bistabile: viene utilizzato come flip-flop set-reset mantenendo il segnale di uscita finché non arriva un segnale di set/reset.
+% 	\item Astabile: produce una forma d'onda periodica senza bisogno di segnali esterni. 
+% \end{itemize}
 
 % Da mettere comunque? Oppure da cancellare dato che è scritto simile nel primo item del primo itemize?
 %Nel circuito la $V_{cc}$ viene ripartita equamente con 3 resistenze uguali. In questo modo compaiono 2 comparatori: uno a soglia %$\sfrac{2}{3}$ (sopra) e uno a soglia $\sfrac{1}{3}$ (sotto).
@@ -146,12 +153,12 @@ Inoltre è stato aggiunto un LED finale, collegato al resto del circuito tramite
 Il funzionamento del circuito è il seguente:
 \begin{enumerate}
 	\item A inizio si ha che: il \textit{trigger} è mantenuto a $V_{cc}$, $V_{out}$ è pari a \texttt{LOW}, di conseguenza la capacità $C_1$ è scarica.
-	\item Quando il \textit{trigger} viene posto a una tensione inferiore di $V_{cc}/3$, grazie alla pressione di del pulsante, si effettua il \texttt{set} nel \textit{flip-flop D}. Con l'effetto di:
+	\item Quando il \textit{trigger} viene posto a una tensione inferiore di $V_{cc}/3$, grazie alla pressione di del pulsante, si effettua il \texttt{set} nel \textit{latch set-reset}. Con l'effetto di:
 	\begin{itemize}
 		\item Porre l'uscita $V_{out} = $ \texttt{HIGH};
 		\item Spegnere il transistor del \textit{discharge} facendo si che la capacità possa caricarsi. 
 	\end{itemize} 	
-	\item  La capacità si continua a caricare finché non supera la tensione di $\frac{2}{3} V_{cc}$, attivando il \texttt{reset} del \textit{flip-flop D}. Ponendo nuovamente l'uscita \texttt{HIGH} e scaricando la capacità.
+	\item  La capacità si continua a caricare finché non supera la tensione di $\frac{2}{3} V_{cc}$, attivando il \texttt{reset} del \textit{latch set-reset}. Ponendo nuovamente l'uscita \texttt{HIGH} e scaricando la capacità.
 \end{enumerate}
 
 
