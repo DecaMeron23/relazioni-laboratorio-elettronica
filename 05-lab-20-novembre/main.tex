@@ -142,17 +142,17 @@ Inoltre è stato aggiunto un LED finale, collegato al resto del circuito tramite
 
 Il funzionamento del circuito è il seguente:
 \begin{enumerate}
-	\item A inizio si ha che: il \textit{trigger} è mantenuto a $V_{cc}$, $V_{out}$ è pari a \texttt{low}, di conseguenza la capacità $C_1$ è scarica.
-	\item Quando il \textit{trigger} viene posto a una tensione inferiore di $V_{cc}/3$, grazie alla pressione di del pulsante, si effettua il \texttt{set} nel \textit{latch set-reset}. Con l'effetto di:
+	\item Inizialmente, con il pulsante non premuto, si ha: \textit{trigger} mantenuto a $V_{cc}$, $V_{out}$ è pari a \texttt{low}, di conseguenza la capacità $C_1$ è scarica (\textit{transistor} di scarica attivo).
+	\item Quando il \textit{trigger} viene posto a una tensione inferiore di $\frac{1}{3}V_{cc}$, grazie alla pressione del pulsante, si effettua il \texttt{set} del \textit{latch set-reset}. Con l'effetto di:
 	      \begin{itemize}
 		      \item Porre l'uscita $V_{out} = $ \texttt{high};
-		      \item Spegnere il transistor del \textit{discharge} facendo si che la capacità possa caricarsi.
+		      \item Spegnere il \textit{transistor} di scarica facendo si che la capacità possa caricarsi.
 	      \end{itemize}
-	\item  La capacità si continua a caricare finché non supera la tensione di $\frac{2}{3} V_{cc}$, attivando il \texttt{reset} del \textit{latch set-reset}. Ponendo nuovamente l'uscita \texttt{high} e scaricando la capacità.
+	\item  La capacità si continua a caricare finché non supera la tensione di $\frac{2}{3} V_{cc}$, attivando il \texttt{reset} del \textit{latch set-reset}. Ponendo nuovamente l'uscita a \texttt{low} e scaricando la capacità.
 \end{enumerate}
 
 
-Per acquisire correttamente l'impulso è stata utilizzata la modalità \textit{single} dell’oscilloscopio, impostando il \textit{trigger} a $\mathrm{V_{DD}/2} = 5\,\mathrm{V}$ sul fronte di discesa del segnale, a \autoref{fig:monostabile-oscilloscopio}.
+Per acquisire correttamente l'impulso è stata utilizzata la modalità \textit{single} dell’oscilloscopio, impostando il \textit{trigger} a $\mathrm{\frac{1}{2}V_{DD}} = 5\,\mathrm{V}$ sul fronte di discesa del segnale, a \autoref{fig:monostabile-oscilloscopio} è presentata la schermata dell'oscilloscopio.
 
 \begin{figure}[h]
 	\centering
