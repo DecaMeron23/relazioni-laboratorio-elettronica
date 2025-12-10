@@ -156,7 +156,7 @@ Per acquisire correttamente l'impulso è stata utilizzata la modalità \textit{s
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{immagini/monostabile-555/monostabile-instabile.PNG}
+	\includegraphics[width=0.6\linewidth]{immagini/monostabile-555/monostabile-instabile.PNG}
 	\caption{In giallo la serie di impulsi spuri dovuti al \textit{switch debouncing}, mentre in azzurro il segnale generato dal monostabile.}
 	\label{fig:monostabile-oscilloscopio}
 \end{figure}
@@ -166,37 +166,39 @@ Per acquisire correttamente l'impulso è stata utilizzata la modalità \textit{s
 \subsection{Astabile}
 
 La configurazione di astabile permette di generare un segnale a onda quadra periodica, schematico a \autoref{fig:circuito-timer555-astabile}.
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.55\linewidth]{immagini/astabile/circutito-monostabile.png}
-	\caption{Configurazione astabile del timer 555.}
-	\label{fig:circuito-timer555-astabile}
-\end{figure}
+
 Il principio di funzionamento del circuito si basa sulla carica e scarica di una capacità, in particolare si susseguono i diversi eventi:
-\begin{itemize}
-	\item Ipotizzando uno stato iniziale in cui l'uscita $V_{out}$ è \texttt{high}, allora la capacità C tende a caricarsi a $V_{cc}$ attraverso le due resistenze $R_A$ e $R_B$.
+\begin{enumerate}
+	\item Ipotizzando uno stato iniziale in cui l'uscita $V_{out}$ è \texttt{high}, allora la capacità $C_1$ tende a caricarsi a $V_{cc}$ attraverso le due resistenze $R_A$ e $R_B$.
 	\item Quando la caduta di tensione su C raggiunge $\frac{2}{3}V_{cc}$ si effettua il \texttt{reset} del \textit{latch} portando l'uscita a \texttt{low};
-	\item Con l'uscita a \texttt{low} si ha che il \textit{transistor} di scarica è attivo, creando un percorso verso massa attraverso la resistenza $R_B$ di scarica per la capacità C;
-	\item Quando la tensione ai capi della capacità si riduce scendendo sotto i $V_{cc}/3$ si effettua il \texttt{set} portando l'uscita a \texttt{high} e spegnendo il \textit{transistor} di scarica;
-	\item A questo punto ricomincia il ciclo di carica di C.
-\end{itemize}
+	\item Con l'uscita a \texttt{low} si ha che il \textit{transistor} di scarica è attivo creando così un percorso verso massa per la capacità $C_1$, scaricandola attraverso la resistenza $R_B$;
+	\item Quando la tensione ai capi della capacità si riduce sotto $\frac{1}{3}V_{cc}$ si effettua il \texttt{set} portando l'uscita a \texttt{high} e spegnendo il \textit{transistor} di scarica;
+	\item A questo punto ricomincia il ciclo di carica di $C_1$ descritto al punto 1.
+\end{enumerate}
 
 Si può notare che la carica del condensatore dipende da $R_A+R_B$ mentre la scarica dal solo $R_B$. Questo determina un \textit{duty cylce} diverso da $50\%$. In particolare si ricava che:
 \begin{align*}
-	T_{up}   & = \ln2 \cdot (R_A + R_B)C \\
-	T_{down} & =  \ln2 \cdot  R_B C
+	T_{up}   & = \ln2 \cdot (R_A + R_B)C_1 \\
+	T_{down} & =  \ln2 \cdot  R_B C_1
 \end{align*}
 Portando ad avere un periodo, e un \textit{duty cycle} pari a:
 \begin{align*}
-	T = \ln2 \cdot (R_A +2 R_B)C \qquad \qquad \delta = \frac{R_A + R_B}{ R_A+2R_B}
+	T = \ln2 \cdot (R_A +2 R_B)C_1 \qquad \qquad \delta = \frac{R_A + R_B}{ R_A+2R_B}
 \end{align*}
 
-Il dimensionamento del circuito è stato effettuato in modo tale da ottenere una frequenza di $1\,\mathrm{kHz}$ per questo si è scelto: $R_A$ pari a $11.8\,\mathrm{k}\ohm$, $R_B=4.7\,\mathrm{k}\ohm$ e la capacità pari a $70\,\mathrm{nF}$.
+Il dimensionamento del circuito è stato effettuato in modo tale da ottenere una frequenza di $1\,\mathrm{kHz}$. Per questo si è scelto: $R_A = 11.8\,\mathrm{k}\ohm$, $R_B=4.7\,\mathrm{k}\ohm$ e la capacità $C_1$ pari a $70\,\mathrm{nF}$.
 In seguito si è verificato, tramite l'oscilloscopio, se il periodo e il \textit{duty cycle} coincidessero con quello teorico, \autoref{fig:astabile-oscilloscopio}.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{immagini/astabile/astabile-periodo.PNG}
+	\includegraphics[width=0.45\linewidth]{immagini/astabile/circutito-monostabile.png}
+	\caption{Configurazione astabile del timer 555.}
+	\label{fig:circuito-timer555-astabile}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.55\linewidth]{immagini/astabile/astabile-periodo.PNG}
 	\caption{Segnale generato dal circuito astabile, con periodo pari a circa $1\,\mathrm{ms} \Rightarrow 1\,\mathrm{KHz}$ e un \textit{duty cycle} di circa $\delta = \frac{800\,\mu\mathrm{s}}{1\,\mathrm{ms}} = 80\% \simeq \frac{R_A + R_B}{ R_A+2R_B} \simeq 78\%$}
 	\label{fig:astabile-oscilloscopio}
 \end{figure}
