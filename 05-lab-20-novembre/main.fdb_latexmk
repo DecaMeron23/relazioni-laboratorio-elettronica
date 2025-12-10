@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1765319756.63938 "/home/emilio/Documenti/universita/relazioni-laboratorio-elettronica/05-lab-20-novembre/main.tex" "main.pdf" "main" 1765319759.0102 0
+["pdflatex"] 1765349747.70766 "/home/emilio/Documenti/universita/relazioni-laboratorio-elettronica/05-lab-20-novembre/main.tex" "main.pdf" "main" 1765349748.99815 0
   "/etc/texmf/web2c/texmf.cnf" 1759053305.78582 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/emilio/Documenti/universita/relazioni-laboratorio-elettronica/05-lab-20-novembre/main.tex" 1765319753.85942 10741 9722f269531de7474a2304fc61451719 ""
+  "/home/emilio/Documenti/universita/relazioni-laboratorio-elettronica/05-lab-20-novembre/main.tex" 1765349746.18281 10902 4d11392d75a779d270d903397b347ac1 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1136768653 3584 13049b61b922a28b158a38aeff75ee9b ""
@@ -226,15 +226,15 @@
   "immagini/astabile/astabile-periodo.PNG" 1765306846.47929 22882 ea397b2f1f32563b0819646a1e466e56 ""
   "immagini/astabile/circutito-monostabile.png" 1765317015.1203 98217 34e0520b8f17d0e91d0d1b3e6cf045bf ""
   "immagini/circuito-digitale/circuito.png" 1765309506.32469 184226 0279222b039e5aa8d30ea8fb0d493f1a ""
-  "immagini/circuito-digitale/mappa_di_karnaugh.jpg" 1765309506.32545 122092 702386efb81e7fe11b25d261746ac1b0 ""
+  "immagini/circuito-digitale/mappa_di_karnaugh.jpg" 1765349355.1736 171918 61c85692ee1ffa3b44070e4f0665cea4 ""
   "immagini/circuito-digitale/tabella-verita.png" 1765309506.32577 58428 5f50a063c7baf7675acf426ba217924e ""
   "immagini/monostabile-555/circuito-monostabile.png" 1765313127.11593 103718 261f589c899ad746ef269ea129ef34e8 ""
   "immagini/monostabile-555/monostabile-instabile.PNG" 1765306306.79493 16997 0794b69956fdeac3c012bd6ff713d73b ""
   "immagini/timer555/timer555.png" 1765309676.63908 29934 f63632bde460653b25180eca8d0a9c1b ""
-  "main-frn.tex" 1765319758.82731 450 968cc1df2af3d8a37a4f11a0fed4da16 "pdflatex"
-  "main.aux" 1765319758.82531 3836 69830d301dd1f86d5944408e6d28bbad "pdflatex"
-  "main.out" 1765319758.82631 504 4a52397c387fc84901d0c851224647f6 "pdflatex"
-  "main.tex" 1765319753.85942 10741 9722f269531de7474a2304fc61451719 ""
+  "main-frn.tex" 1765349748.90662 450 968cc1df2af3d8a37a4f11a0fed4da16 "pdflatex"
+  "main.aux" 1765349748.90562 3836 8878808ffb2e8f1e61276f3f49b120fc "pdflatex"
+  "main.out" 1765349748.90662 504 4a52397c387fc84901d0c851224647f6 "pdflatex"
+  "main.tex" 1765349746.18281 10902 4d11392d75a779d270d903397b347ac1 ""
   (generated)
   "main-frn.tex"
   "main.aux"
