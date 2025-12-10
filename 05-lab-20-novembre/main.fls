@@ -385,11 +385,11 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ectt1200.tfm
 INPUT /usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc
-INPUT ./immagini/circuito-digitale/circuito.png
-INPUT ./immagini/circuito-digitale/circuito.png
-INPUT ./immagini/circuito-digitale/circuito.png
-INPUT ./immagini/circuito-digitale/circuito.png
-INPUT ./immagini/circuito-digitale/circuito.png
+INPUT ./immagini/circuito-digitale/circuito-led.png
+INPUT ./immagini/circuito-digitale/circuito-led.png
+INPUT ./immagini/circuito-digitale/circuito-led.png
+INPUT ./immagini/circuito-digitale/circuito-led.png
+INPUT ./immagini/circuito-digitale/circuito-led.png
 INPUT ./immagini/timer555/timer555.png
 INPUT ./immagini/timer555/timer555.png
 INPUT ./immagini/timer555/timer555.png
@@ -428,6 +428,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr10.pfb
